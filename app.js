@@ -23,6 +23,13 @@
 
 // console.log('Ассалому алейкум');
 
+// console.log([1, 2, 3, 4]);
+// console.log({a:1, b:2, c:3, d:4});
+// console.table({a:1, b:2, c:3, d:4});
+// console.error('This is some error');
+// console.warn('This is a warning');
+// console.clear();
+
 // console.log(document);
 // console.log(document.querySelector('h1'));
 // document.querySelector('h1').style.color = 'red';
@@ -32,3 +39,47 @@
 // document.querySelector('h1').style.paddingTop = '10px';
 // document.querySelector('h1').style.marginBottom = '15px';
 // document.querySelector('h1').style.textAlign = 'center';
+
+// var name = 'Mahmadsaid';
+// console.log(name);
+// var name = 'Navruzbek';
+// console.log(name);
+
+// var status;
+// console.log(status);
+// status = "married";
+// console.log(status);
+
+// var firstName = "Mahmadsaid";  // Camel case 
+// var first_name = "Mahmadsaid"; // Underscore
+// var FirstName = "Mahmadsaid";  //Pascal case
+
+// let name = 'Mahmadsaid';
+// console.log(name);
+// name = 'Navruzbek';
+// console.log(name);
+
+// let name;
+// name = 'Mahmadsaid';
+// console.log(name);
+// name = 'Navruzbek';
+// console.log(name);
+
+// const status = "married";
+// status = "free";
+
+// const person = {
+//     name: "Mahmadsaid",
+//     age: 30,
+//     status: "married",
+//     sex: "male"
+// }
+// person.name = "Navruzbek";
+// person.age = 33;
+// person.status = "free";
+// person.sex = "female";
+// console.log(person);
+
+// const numbers = [1, 2, 3, 4, 5];
+// numbers.push(6);
+// console.log(numbers);
