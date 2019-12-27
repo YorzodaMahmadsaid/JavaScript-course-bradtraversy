@@ -176,3 +176,23 @@
 // const value2 = 4;
 // const sum = value1 + value2;
 // console.log(sum); //54
+
+
+const num1 = 125;
+const num2 = 50;
+let val;
+
+val = num1 + num2;
+val = num1 - num2;
+val = num1 * num2;
+val = num1 / num2;
+val = num1 % num2; 
+
+val = Math.PI;
+val = Math.E;
+val = Math.round(2.4);
+val = Math.ceil(2.4);
+val = Math.floor(2.8);
+val = Math.sqrt(81);
+val = Math.abs(-3);
+console.log(val);
