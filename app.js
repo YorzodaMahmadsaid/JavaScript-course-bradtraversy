@@ -177,22 +177,68 @@
 // const sum = value1 + value2;
 // console.log(sum); //54
 
+// const num1 = 125;
+// const num2 = 50;
+// let val;
 
-const num1 = 125;
-const num2 = 50;
-let val;
+// val = num1 + num2;
+// val = num1 - num2;
+// val = num1 * num2;
+// val = num1 / num2;
+// val = num1 % num2; 
 
-val = num1 + num2;
-val = num1 - num2;
-val = num1 * num2;
-val = num1 / num2;
-val = num1 % num2; 
+// val = Math.PI;
+// val = Math.E;
+// val = Math.round(2.4);
+// val = Math.ceil(2.4);
+// val = Math.floor(2.8);
+// val = Math.sqrt(81);
+// val = Math.abs(-3);
+// val = Math.pow(2, 3);
+// val = Math.min(2, 33, 23, 24, 4, 5, 19);
+// val = Math.max(2, 4, 5, 1, 34, 54);
+// val = Math.random();
+// val = Math.floor(Math.random()*20);
+// console.log(val);
 
-val = Math.PI;
-val = Math.E;
-val = Math.round(2.4);
-val = Math.ceil(2.4);
-val = Math.floor(2.8);
-val = Math.sqrt(81);
-val = Math.abs(-3);
-console.log(val);
+// const firstName = "Yorzoda";
+// const lastName = "Mahmadsaid";
+// const age = 30;
+
+// let value;
+// value = firstName + lastName;
+// value = firstName + ' ' + lastName;
+// value = "Yorzoda";
+// value += " Mahmadsaid"; 
+// value = "Ассалому алейкум номи ман " + firstName + " " + lastName + " мебошад" + " ва ман " + age + " сола мебошам";
+// value = firstName.length;
+// value = firstName.concat(' ', lastName);
+// value = firstName.toUpperCase();
+// value = lastName.toLowerCase();
+// value = firstName[3];
+// value = firstName.indexOf('z');
+// value = firstName.lastIndexOf('o');
+// value = firstName.charAt('1');
+// value = firstName.charAt(firstName.length - 1);
+// value = firstName.substring(0, 3);
+// value = firstName.slice(0, 4);
+
+// let str  = 'Assalomu alykum va rahmatulloi va barakatuh';
+// str = 'Assalomu, aleykum, barodari, aziz'
+// value = str.split(' ');
+
+// value = str.replace('aziz', 'hubu mehrubon');
+
+// value = str.includes('Assalomu');
+// console.log(value);
+
+const name = 'Mahmadsaid';
+const age = 30;
+const job = "Frontend developer";
+const city = "Norak";
+let html;
+
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li> Job: ' + job + '</li><li>City: ' + city + '</li></ul>'
+var name = Mahmadsaid;
+var age = 30;
+var sex = male; 
