@@ -71,4 +71,51 @@ numbers.push(6);
 console.log(numbers); */
 
 
-// 07 Data types in JavaScript 
+/* // 07 Data types in JavaScript 
+// Primitive data types
+// String
+// Number
+// Boolean
+// Null 
+// Undefined 
+// Symbol(ES6) 
+
+const name = 'John Doe';
+console.log(typeof name);
+
+const age = 31;
+console.log(typeof age);
+
+const hasKids = true;
+console.log(typeof hasKids);
+
+const car = null;
+console.log(typeof car);
+
+var test;
+console.log(test);
+
+const sym = Symbol();
+console.log(sym);
+
+// Reference data types
+// Arrays
+// Object
+// Function 
+// Dates 
+
+const hobbies = ['movies', 'music'];
+console.log(typeof hobbies);
+
+const address = {city: 'Boston', state: 'Hatlon'}
+console.log(typeof address);
+
+const myFunction = function() {};
+console.log(typeof myFunction);
+
+const today = new Date();
+console.log(today, typeof today); */
+
+
+// 08 Type conversion 
+
