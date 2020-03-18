@@ -368,15 +368,71 @@ var html = `<ul class="list-group">
 document.body.innerHTML = html; */
 
 
-// 012 Array and Array methods
+/* // 012 Array and Array methods
 const numbers = [23,45,66,67,24,65];
-const number2 = new Array(33,55,77,88,85, 33);
+const number2 = new Array(33,55,77,88,85);
 const fruits = ['Apple', 'Banana', 'Orange', 'Pear'];
 const mixed = [22, 'Hello', true, undefined, null, {a:1, b:2}, new Date()];
+
 console.log(numbers);
+console.log(numbers.length); // 6
+console.log(Array.isArray(numbers)); // true
+console.log(numbers[0]); // 23
+console.log(numbers[3]); // 67
+console.log(numbers.indexOf(23)); // 0
+
 console.log(number2);
+console.log(number2.length); // 5
+console.log(Array.isArray(number2)); // true
+console.log(number2[1]); // 55
+console.log(number2[2]); // 77
+console.log(number2.indexOf(33)); // 0
+
 console.log(fruits);
+console.log(fruits.length); // 4
+console.log(Array.isArray(fruits)); // true
+console.log(fruits[2]); // Orange
+console.log(fruits[3]); // Pear
+console.log(fruits.indexOf('Apple')); // 0
+
 console.log(mixed);
+console.log(mixed.length); // 7
+console.log(Array.isArray(mixed)); // true
+console.log(mixed[4]); // null
+console.log(mixed[5]); // {a:1, b:2}
+console.log(mixed.indexOf(4));
+
+var myArray = [1,2,3,4,5,6, 50, 66];
+var myArray2 = ['Said','Daler'];
+myArray[2] = 100; // replace
+myArray.push(200); // add to end
+myArray.unshift(50); // add to front
+myArray.pop(); // take off from end
+myArray.shift() // take off front
+myArray.splice(0,1);
+myArray.reverse()
+myArray = myArray.concat(myArray2);
+myArray.sort();
+myArray2.sort();
+myArray.sort(function(x, y) {return x - y});
+myArray.sort(function(x, y) {return y - x});
+console.log(myArray);
+
+var array = [10, 20, 30, 40, 50]; 
+  
+var found = array.find(function(element) { 
+  return element > 10; 
+}); 
+
+var found = array.find(function(element) { 
+  return element < 40; 
+}); 
+  
+console.log(found);  */
+
+
+// 013 Object literals
+
 
 
 
