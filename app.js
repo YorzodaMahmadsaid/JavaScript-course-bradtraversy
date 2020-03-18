@@ -431,10 +431,254 @@ var found = array.find(function(element) {
 console.log(found);  */
 
 
-// 013 Object literals
+/* // 013 Object literals
+const person = {
+    firstName: 'Mahmadsaid',
+    lastName: 'Yorzoda',
+    age: 30,
+    email: 'sayfullo@mail.ru',
+    hobbies: ['sport', 'drive'],
+    address: {city: 'Nurek', state: 'Hatlon'},
+    getBirthYear: function() {return 2020 - this.age}
+
+}
+
+let value;
+value = person.firstName;
+value = person['firstName'];
+value = person.lastName;
+value = person.age;
+value = person.email;
+value = person.hobbies;
+value = person.getBirthYear();
+console.log(value);
+
+const peoples = [
+    {name: 'Mahmadsaid', age: 30},
+    {name: 'Said', age: 24},
+    {name: 'Jaloliddin', age: 23},
+    {name: 'Hadyatullo', age: 21},
+    {name: 'Azizullo', age: 22},
+]
+
+console.log(peoples.length); // 5
+console.log(peoples[0].name); // Mahmadsiad
+
+for(let i = 0; i < peoples.length; i++) {
+    console.log(peoples[i].name);
+}
+
+let i = 0;
+if(i < peoples.length) {console.log(peoples[i].name); i++ }
+if(i < peoples.length) {console.log(peoples[i].name); i++ }
+if(i < peoples.length) {console.log(peoples[i].name); i++ }
+if(i < peoples.length) {console.log(peoples[i].name); i++ }
+if(i < peoples.length) {console.log(peoples[i].name); i++ } */
 
 
+/* // 014 Date times
+const today = new Date();
+console.log(today);
+
+var birthDay = new Date('9-10-1990 11:34:00'); 
+console.log(birthDay);
+
+var birthDay = new Date('9/10/1990 11:30:33');
+console.log(birthDay);
+
+let value;
+value = today.getMonth();
+value = today.getDate();
+value = today.getDay();
+value = today.getFullYear();
+value = today.getHours();
+value = today.getMinutes();
+value = today.getSeconds();
+value = today.getMilliseconds();
+value = today.getTime();
+console.log(value);
+
+var birthDay = new Date();
+birthDay.setMonth(2);
+birthDay.setDate(11);
+birthDay.setFullYear(1990);
+birthDay.setHours(3);
+birthDay.setMinutes(39);
+birthDay.setSeconds(23);
+console.log(birthDay); */
 
 
+/* // 014 If statements comparison operators
+var id = 100;
+if(id == 100) {
+    console.log('Correct');
+} else {
+    console.log('Incorrect');
+}
+
+if(id != 100) {
+    console.log('Correct');
+} else {
+    console.log('Incorrect');
+}
+
+if(id === 100) {
+    console.log('Correct');
+} else {
+    console.log('Incorrect');
+}
+
+if(id !== 100) {
+    console.log('Correct');
+} else {
+    console.log('Incorrect');
+}
+
+var id = 100;
+if(id) {
+    console.log(`The id is ${id}`);
+} else {
+    console.log('No id');
+}
+
+if(id > 200) {
+    console.log('Correct');
+} else {
+    console.log('Incorrect');
+}
+
+var color = 'red';
+if(color === 'red') {
+    console.log('Colore is red');
+} else if( color === 'blue') {
+    console.log('Color is blue');
+} else if(color === 'yellow') {
+    console.log('Color is yellow');
+} else {
+    console.log('Color non blue and not red and not yellow');
+}
+
+var name = 'Said';
+var age = 30;
+if(age > 0 && age < 12) {
+    console.log(`${name} is a child`);
+} else if(age >= 13 && age <= 19) {
+    console.log(`${name} is a teenager`);
+} else {
+    console.log(`${name} is an adult`);
+}
+
+if(age < 16 || age > 65) {
+    console.log(`${name} can not run in race`);
+} else {
+    console.log(`${name} is registered for the race`);
+}
+
+var id = 100;
+console.log(id === 100? 'Correct' : 'Incorrect');
+
+if(id === 100) 
+    console.log('Correct');
+else
+    console.log('Incorrect'); */
 
 
+/* // 016 Switches
+var color = 'red';
+switch(color) {
+    case 'red': 
+        console.log('Color is red');
+        break;
+    case 'blue': 
+        console.log('Color is blue');
+        break;
+    case 'yellow': 
+        console.log('Color is yellow');
+        break;
+    default:
+        console.log('Color not found');
+}
+
+let day;
+ switch( new Date().getDay() ) {
+     case 0:
+         day = 'Sunday';
+         break;
+     case 1:
+         day = 'Monday';
+         break;
+     case 2:
+         day = 'Tuesday';
+         break;
+     case 3:
+         day = 'Wednesday';
+         break;
+     case 4:
+         day = 'Thursday';
+         break;
+     case 5:
+         day = 'Friday';
+         break;
+     case 6:
+         day = 'Saturday';
+         break;
+    default:
+        console.log('Incorrect day');
+ }
+ console.log(`Today is ${day}`); */
+
+
+ /* // 017 Function declarations expressions
+ function greet() {
+     console.log('Hello');
+ }
+ greet();
+
+ function greet() {
+     return 'Hello';
+ }
+ console.log(greet());
+
+ function greet(firstName, lastName) {
+     return 'Hello ' + firstName + ' ' + lastName;
+ }
+ console.log(greet('Said', 'Yorzoda'));
+
+ function greet(firstName = 'Mahmadsaid', lastName = 'Yorzoda') {
+     return 'Hello ' + firstName + ' ' + lastName;
+ }
+ console.log(greet());
+
+ var square = function(x) {
+     return x*x;
+ }
+console.log(square(2));
+
+(function() {
+    console.log('Hello my friend');
+})();
+
+(function(name) {
+    console.log('Hello ' + name)
+})('Said');
+
+ const todo = {
+     add: function() {
+         console.log('Add todo');
+     },
+     edit: function(id) {
+         console.log(`Edit todo ${id}`)
+     }
+ }
+
+ todo.delete = function() {
+     console.log('Delete todo');
+ }
+
+todo.delete(); 
+todo.add();
+todo.edit(22);
+console.log(todo); */
+
+
+// 018 General loops
