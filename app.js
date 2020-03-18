@@ -117,5 +117,268 @@ const today = new Date();
 console.log(today, typeof today); */
 
 
-// 08 Type conversion 
+/* // 08 Type conversion 
+var value = String(22);
+console.log(value);
+console.log(typeof value);
+console.log(value.length);
+
+var value = String(4 + 4);
+console.log(value);
+console.log(typeof value);
+console.log(value.length);
+
+var value = String(true);
+console.log(value);
+console.log(typeof value);
+console.log(value.length);
+
+var value = String( new Date() );
+console.log(value);
+console.log(typeof value);
+console.log(value.length);
+
+var value = [1,2,3,4,5];
+console.log(value);
+console.log(typeof value);
+console.log(value.length);
+
+// toString()
+var value = (5).toString();
+console.log(value);
+console.log(typeof value);
+console.log(value.length);
+
+var value = (true).toString();
+console.log(value);
+console.log(typeof value);
+console.log(value.length);
+
+// String to number
+var value = Number('12');
+console.log(value);
+console.log(typeof value);
+console.log(value.toFixed(2));
+
+var value = Number(true);
+console.log(value);
+console.log(typeof value);
+
+var value = Number(false);
+console.log(value);
+console.log(typeof value);
+
+var value = Number(null);
+console.log(value);
+console.log(typeof value);
+
+var value = Number('Hello');
+console.log(value);
+console.log(typeof value);
+
+var value = Number([1,2,3,4,5]);
+console.log(value);
+console.log(typeof value);
+
+// String to number with parseInt
+var value = parseInt('100');
+console.log(value);
+
+var value = parseFloat('100.30');
+console.log(value);  // 100.3
+
+var value = parseFloat('100.30');
+console.log(value.toFixed(2)); // 100.30
+
+var valueOne = 5;
+var valueTwo = 4;
+var sum = valueOne + valueTwo;
+console.log(sum); // 9
+console.log(typeof sum); // number
+
+var valueOne = String(5);
+var valueTwo = 3;
+var sum = valueOne + valueTwo;
+console.log(sum); // 53 
+console.log(typeof sum); // string
+
+var valueOne = String(5);
+var valueTwo = 3;
+var sum = Number(valueOne + valueTwo);
+console.log(sum); // 53
+console.log(typeof sum); // number */
+
+
+/* // 09 Numbers the math object
+var numberOne = 100;
+var numberTwo = 50;
+var sum1 = numberOne + numberTwo;
+var sum2 = numberOne - numberTwo;
+var sum3 = numberOne * numberTwo;
+var sum4 = numberOne / numberTwo;
+var sum5 = numberOne % numberTwo;
+console.log(numberOne + ' + ' + numberTwo + ' = ' + sum1);
+console.log(numberOne + ' - ' + numberTwo + ' = ' + sum2);
+console.log(numberOne + ' * ' + numberTwo + ' = ' + sum3);
+console.log(numberOne + ' / ' + numberTwo + ' = ' + sum4);
+console.log(numberOne + ' % ' + numberTwo + ' = ' + sum5);
+
+var value = Math.PI;
+console.log(value); // 3.14
+
+var value = Math.E;
+console.log(value); // 2.718
+
+var value = Math.round(2.4);
+console.log(value); // 2
+
+var value = Math.ceil(2.4);
+console.log(value); // 3
+
+var value = Math.floor(2.8);
+console.log(value); // 2
+
+var value = Math.sqrt(64);
+console.log(value); // 8
+
+var value = Math.abs(-3);
+console.log(value); // 3
+
+var value = Math.pow(2, 2);
+console.log(value); // 4
+
+var value = Math.min(2, 33, 45, 55);
+console.log(value); // 2
+
+var value = Math.max(2, 44, 55, 66);
+console.log(value); // 66
+
+var value = Math.random();
+console.log(value);
+
+var value = Math.floor(Math.random() * 10) + 1; // returns a random integer from 1 to 10
+console.log(value); */
+
+
+/* // 010 String methods concatenation
+var firstName = 'Yorzoda';
+var lastName = 'Mahmadsaid';
+var sum = firstName + lastName; 
+console.log(sum); // YorzodaMahmadsaid
+
+sum = firstName + ' ' + lastName;
+console.log(sum); // Yorzoda Mahmadsaid
+
+var value;
+value = 'Yorzoda';
+value += 'Mahmadsaid';
+console.log(value);
+
+
+var firstName = 'Yorzoda';
+var age = 30;
+value = 'Hello, my name is ' + firstName + ' and I am ' + age;
+console.log(value);
+
+// Escaping
+var someText = "That's awesome, I can't wait";
+console.log(someText);
+
+// Length
+var firstName = 'Mahmadsaid';
+console.log(firstName.length);
+
+// Concat()
+var firstName = "Mahmadsaid";
+var lastName = 'Yorzoda';
+var value = firstName.concat(' ', lastName);
+console.log(value);
+
+// toUpperCase() and toLowerCase()
+var firstName = 'Yorzoda';
+console.log(firstName.toUpperCase());
+console.log(firstName.toLowerCase());
+
+
+var firstName = "Yorzoda";
+console.log(firstName[0]); // Y
+console.log(firstName.indexOf('z')); // 3
+console.log(firstName.lastIndexOf('d') ); // 1
+console.log(firstName.charAt('2')); // r
+console.log(firstName.charAt(firstName.length - 1)); // a
+console.log(firstName.substring(0, 3)); // Yor
+console.log(firstName.slice(0, 3)); // Yor
+
+var someText = 'Hello my name is Said i am 30';
+console.log(someText.split(' '));
+
+var someText = 'Hello,my,name,is,Said,i,am,30';
+console.log(someText.split(','));
+
+var someText = 'Hello my name is Said';
+console.log(someText.replace('Said', 'Mahmadsaid'));
+
+var someText = 'My name is Said';
+console.log(someText.includes('Said')); // true
+
+var someText = 'My name is Said';
+console.log(someText.includes('Jack')); // false */
+
+
+/* // 011 Template literals
+const name = 'Mahmadsaid';
+const age = 30;
+const job = 'Web developer';
+const city = 'Dushanbe';
+
+var html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>'
+document.body.innerHTML = html;
+
+var html = '<ul>' + 
+                '<li>Name: ' + name + '</li>' + 
+                '<li>Age: ' + age + '</li>' + 
+                '<li>Job: ' + job + '</li>' + 
+                '<li>City: ' + city + '</li>' + 
+           '</ul>'
+document.body.innerHTML = html;
+
+function hello() {
+    return 'hello';
+}
+var html = `<ul>
+                <li>Name: ${name}</li>
+                <li>Age: ${age}</li>
+                <li>Job: ${job}</li>
+                <li>City: ${city}</li>
+                <li>Example: ${2+2}</li>
+                <li>Example: ${hello()}</li>
+                <li>Example: ${age > 30 ? 'Over 30' : 'Under 30'}</li>
+            </ul>`
+document.body.innerHTML = html;
+
+var html = `<ul class="list-group">
+                <li class="list-group-item">Name: ${name}</li>
+                <li class="list-group-item">Age: ${age}</li>
+                <li class="list-group-item">Job: ${job}</li>
+                <li class="list-group-item">City: ${city}</li>
+                <li class="list-group-item">Example: ${2+2}</li>
+                <li class="list-group-item">Example: ${hello()}</li>
+                <li class="list-group-item">Example: ${age > 30 ? 'Over 30' : 'Under 30'}</li>
+            </ul>`
+document.body.innerHTML = html; */
+
+
+// 012 Array and Array methods
+const numbers = [23,45,66,67,24,65];
+const number2 = new Array(33,55,77,88,85, 33);
+const fruits = ['Apple', 'Banana', 'Orange', 'Pear'];
+const mixed = [22, 'Hello', true, undefined, null, {a:1, b:2}, new Date()];
+console.log(numbers);
+console.log(number2);
+console.log(fruits);
+console.log(mixed);
+
+
+
+
 
