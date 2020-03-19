@@ -680,5 +680,87 @@ todo.add();
 todo.edit(22);
 console.log(todo); */
 
-
+/*
 // 018 General loops
+for(let i = 0; i < 3; i++) {
+    console.log(i);
+}
+
+let i = 0;
+if(i < 3) {console.log(i), i++};
+if(i < 3) {console.log(i), i++};
+if(i < 3) {console.log(i), i++};
+
+for(let i = 0; i < 4; i++) {
+    if(i === 2) {
+        console.log('This is number 2');
+        continue;
+    }
+
+    if(i === 3) {
+        console.log('Stop the loop');
+        break;
+    }
+
+    console.log('Number: ' + i);
+}
+
+let i = 0; 
+while(i < 3) {
+    console.log('Number: ' + i);
+    i++;
+}
+
+let i = 100;
+do {
+    console.log('Number: ' + i);
+    i++;
+} while(i < 10);
+
+const cars = ['Tayota', 'Mazda', 'Ford', 'Opel', 'Nexi'];
+for(let i = 0; i < cars.length; i++) {
+    console.log(cars[i]);
+}
+
+const fruits = ['Apple', 'Banana', 'Limon', 'Grape', 'Cherry'];
+
+fruits.forEach(function(fruit) {
+    console.log(fruit);
+});
+
+fruits.forEach(function(index, fruit, array) {
+    console.log(`${index} : ${fruit}`)
+    console.log(array);
+});
+
+fruits.forEach(fruit => console.log(fruit));
+
+const users = [
+    {id: 1, name: 'Said'},
+    {id: 2, name: 'Daler'},
+    {id: 3, name: 'Dilovar'},
+    {id: 4, name: 'Navruz'}
+]
+
+const ids = users.map(user => {return user.id});
+console.log(ids);
+
+const names = users.map(user => {return user.name});
+console.log(names);
+
+const user = {
+    firstName: 'Yorzoda',
+    lastName: 'Mahmadsaid',
+    age: 30
+}
+
+for(let name in user) {
+    console.log(name);
+}
+
+for(let x in user) {
+    console.log(`${x} : ${user[x]}`);
+} */
+
+
+// A look at the window object
