@@ -1,4 +1,4 @@
-/* // 02 Chapter: JavaScript language fundamentals
+/* // 02 CHAPTER: JAVASCRIPT LANGUAGE FUNDAMENTALS
 // 04 Section: Intro file setup
 alert('Hello World!'); */
 
@@ -763,4 +763,76 @@ for(let x in user) {
 } */
 
 
-// A look at the window object
+/* // 019 A look at the window object
+console.log('Hello');
+
+alert('Hello');
+
+const input = prompt();
+alert(input);
+
+if(confirm('Are you sure?')) {
+    alert('Yes');
+} else {
+    alert('Cancel');
+}
+
+var value = window.outerHeight;
+var value = window.outerWidth;
+
+var value = window.innerHeight;
+var value = window.innerWidth;
+
+var value = window.scrollY;
+var value = window.scrollX;
+
+var value = window.location;
+var value = window.location.href;
+var value = window.location.hostname;
+var value = window.location.href = 'http://google.com'
+var value = window.location.reload();
+var value = window.history.go(-1);
+var value = window.history.length;
+var value = window.navigator;
+var value = window.navigator.appVersion;
+var value = window.navigator.language;
+
+console.log(value); */
+
+
+/* // 020 Block scop with let const
+var a = 1;
+let b = 2;
+const c = 3;
+
+function test() {
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('Function scop: ', a, b, c);
+}
+
+test();
+
+if(true) {
+    var a = 3;
+    let b = 4; 
+    const c = 5;
+    console.log('If scope', a, b, c);
+}
+
+for(let a = 0; a < 5; a++) {
+    console.log(`Loop: ${a}`)
+}
+
+console.log('Global scope: ', a, b, c); // a=1, b=2, c=3;
+
+for(var a = 0; a < 5; a++) {
+    console.log(`Loop: ${a}`)
+}
+
+console.log('Global scope: ', a, b, c); // a=5, b=2, c=3; */
+
+
+// 03 DOM MANIPULATION EVENTS
+// 021 What is the DOM?
