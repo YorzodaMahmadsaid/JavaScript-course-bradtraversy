@@ -836,3 +836,45 @@ console.log('Global scope: ', a, b, c); // a=5, b=2, c=3; */
 
 // 03 DOM MANIPULATION EVENTS
 // 021 What is the DOM?
+/* 
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Title</title>
+</head>
+<body>
+</body>
+</html> 
+*/
+
+
+/* // 022 Examining the document object
+let value;
+
+value = document;
+value = document.all;
+value = document.all[2];
+value = document.all.length;
+value = document.head;
+value = document.body;
+value = document.doctype;
+value = document.domain;
+value = document.URL;
+value = document.characterSet;
+value = document.contentType;
+
+value = document.forms;
+value = document.links;
+value = document.imeges;
+value = document.scripts;
+
+let scripts = document.all;
+let scriptsArr = Array.from(scripts);
+
+scriptsArr.forEach(function(script) {
+    console.log(script)} );
+
+console.log(value); */
+
+
+// 023 DOM selectors for single elements
