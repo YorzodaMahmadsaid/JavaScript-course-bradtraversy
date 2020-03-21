@@ -368,67 +368,67 @@ var html = `<ul class="list-group">
 document.body.innerHTML = html; */
 
 
-/* // 012 Array and Array methods
-const numbers = [23,45,66,67,24,65];
-const number2 = new Array(33,55,77,88,85);
-const fruits = ['Apple', 'Banana', 'Orange', 'Pear'];
-const mixed = [22, 'Hello', true, undefined, null, {a:1, b:2}, new Date()];
+//  // 012 Array and Array methods
+// const numbers = [23,45,66,67,24,65];
+// const number2 = new Array(33,55,77,88,85);
+// const fruits = ['Apple', 'Banana', 'Orange', 'Pear'];
+// const mixed = [22, 'Hello', true, undefined, null, {a:1, b:2}, new Date()];
 
-console.log(numbers);
-console.log(numbers.length); // 6
-console.log(Array.isArray(numbers)); // true
-console.log(numbers[0]); // 23
-console.log(numbers[3]); // 67
-console.log(numbers.indexOf(23)); // 0
+// console.log(numbers);
+// console.log(numbers.length); // 6
+// console.log(Array.isArray(numbers)); // true
+// console.log(numbers[0]); // 23
+// console.log(numbers[3]); // 67
+// console.log(numbers.indexOf(23)); // 0
 
-console.log(number2);
-console.log(number2.length); // 5
-console.log(Array.isArray(number2)); // true
-console.log(number2[1]); // 55
-console.log(number2[2]); // 77
-console.log(number2.indexOf(33)); // 0
+// console.log(number2);
+// console.log(number2.length); // 5
+// console.log(Array.isArray(number2)); // true
+// console.log(number2[1]); // 55
+// console.log(number2[2]); // 77
+// console.log(number2.indexOf(33)); // 0
 
-console.log(fruits);
-console.log(fruits.length); // 4
-console.log(Array.isArray(fruits)); // true
-console.log(fruits[2]); // Orange
-console.log(fruits[3]); // Pear
-console.log(fruits.indexOf('Apple')); // 0
+// console.log(fruits);
+// console.log(fruits.length); // 4
+// console.log(Array.isArray(fruits)); // true
+// console.log(fruits[2]); // Orange
+// console.log(fruits[3]); // Pear
+// console.log(fruits.indexOf('Apple')); // 0
 
-console.log(mixed);
-console.log(mixed.length); // 7
-console.log(Array.isArray(mixed)); // true
-console.log(mixed[4]); // null
-console.log(mixed[5]); // {a:1, b:2}
-console.log(mixed.indexOf(4));
+// console.log(mixed);
+// console.log(mixed.length); // 7
+// console.log(Array.isArray(mixed)); // true
+// console.log(mixed[4]); // null
+// console.log(mixed[5]); // {a:1, b:2}
+// console.log(mixed.indexOf(4));
 
-var myArray = [1,2,3,4,5,6, 50, 66];
-var myArray2 = ['Said','Daler'];
-myArray[2] = 100; // replace
-myArray.push(200); // add to end
-myArray.unshift(50); // add to front
-myArray.pop(); // take off from end
-myArray.shift() // take off front
-myArray.splice(0,1);
-myArray.reverse()
-myArray = myArray.concat(myArray2);
-myArray.sort();
-myArray2.sort();
-myArray.sort(function(x, y) {return x - y});
-myArray.sort(function(x, y) {return y - x});
-console.log(myArray);
+// var myArray = [1,2,3,4,5,6, 50, 66];
+// var myArray2 = ['Said','Daler'];
+// myArray[2] = 100; // replace
+// myArray.push(200); // add to end
+// myArray.unshift(50); // add to front
+// myArray.pop(); // take off from end
+// myArray.shift() // take off front
+// myArray.splice(0,1);
+// myArray.reverse()
+// myArray = myArray.concat(myArray2);
+// myArray.sort();
+// myArray2.sort();
+// myArray.sort(function(x, y) {return x - y});
+// myArray.sort(function(x, y) {return y - x});
+// console.log(myArray);
 
-var array = [10, 20, 30, 40, 50]; 
+// var array = [10, 20, 30, 40, 50]; 
   
-var found = array.find(function(element) { 
-  return element > 10; 
-}); 
+// var found = array.find(function(element) { 
+//   return element > 10; 
+// }); 
 
-var found = array.find(function(element) { 
-  return element < 40; 
-}); 
+// var found = array.find(function(element) { 
+//   return element < 40; 
+// }); 
   
-console.log(found);  */
+// console.log(found);
 
 
 /* // 013 Object literals
@@ -905,5 +905,51 @@ console.log(document.querySelector('h1'));
 console.log(document.querySelector('td:last-child').style.color = 'red'); */
 
 
-// 024 DOM selectors for multiple elements
+/* // 024 DOM selectors for multiple elements
+// GET ELEMENT BY CLASS NAME 
+const items = document.getElementsByClassName('collection-item');
+console.log(items);
+console.log(items[0]);
+items[0].style.background = 'red';
+items[0].textContent = 'hello world';
 
+const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+console.log(listItems);
+
+// GET ELEMENT BY TAG ELEMENT
+let tags = document.getElementsByTagName('li');
+tags[0];
+tags[0].style.background = 'red';
+tags[0].textContent = 'hello world';
+
+tags = Array.from(tags);
+tags.reverse();
+
+tags.forEach(function(li, index) {
+    console.log(li.className);
+    li.textContent = `${index} : 'Hello'`;
+})
+
+console.log(tags);
+
+// QUERY SELECTOR ALL 
+const items = document.querySelectorAll('li.collection-item');
+
+items.forEach(function(item, index) {
+    item.textContent = `${index} : 'Hello'`
+})
+
+console.log(items);
+
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+const liEven = document.querySelectorAll('li:nth-child(even)');
+
+liOdd.forEach(function(li, index) {
+    li.style.background = '#ccc';
+})
+
+for(let i = 0; i <liEven.length; i++) {
+    liEven[i].style.background = 'black';
+    liEven[i].style.color = 'white';
+} */
+ 
