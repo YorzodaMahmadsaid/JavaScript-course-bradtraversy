@@ -877,4 +877,33 @@ scriptsArr.forEach(function(script) {
 console.log(value); */
 
 
-// 023 DOM selectors for single elements
+/* // 023 DOM selectors for single elements
+console.log(document.getElementById('task'));
+
+console.log(document.getElementById('task').id);
+
+console.log(document.getElementById('task').className);
+
+// CHANGE STYLE
+document.getElementById('task').style.background = '#333';
+document.getElementById('task').style.color = 'white';
+document.getElementById('task').style.paddingLeft = '30px';
+
+// CHANGE CONTENT
+document.getElementById('task').textContent = 'May todo list tasks';
+document.getElementById('task').innerText = 'This is my list tasks';
+document.getElementById('task').innerHTML = '<span style="color:red">This is my all tasks</span>';
+
+const taskId = document.getElementById('task');
+taskId.style.color = 'red';
+taskId.style.background = 'black';
+
+// QUARY SELECTOR
+console.log(document.querySelector('#task'));
+console.log(document.querySelector('.mdc-data-table__cell'));
+console.log(document.querySelector('h1'));
+console.log(document.querySelector('td:last-child').style.color = 'red'); */
+
+
+// 024 DOM selectors for multiple elements
+
