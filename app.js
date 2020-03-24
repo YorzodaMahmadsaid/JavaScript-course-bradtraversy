@@ -933,7 +933,7 @@ tags.forEach(function(li, index) {
 console.log(tags);
 
 // QUERY SELECTOR ALL 
-const items = document.querySelectorAll('li.collection-item');
+const items = document.querySelectorAll('ul.collection li.collection-item');
 
 items.forEach(function(item, index) {
     item.textContent = `${index} : 'Hello'`
@@ -953,3 +953,23 @@ for(let i = 0; i <liEven.length; i++) {
     liEven[i].style.color = 'white';
 } */
  
+
+// 025 Traversing the DOM
+let value;
+
+const list = document.querySelector('ul.collection');
+const listItems = document.querySelector('li.collection-item:first-child');
+const listBody = document.querySelector('body');
+// value = listItems;
+// console.log(value);
+
+// GET CHILD NODES
+value = listBody.children;
+console.log(value);
+
+value = listBody.childNodes;
+console.log(value);
+
+value = list.children[0];
+value = list.children[1].textContent = 'Hello world';
+console.log(value);
