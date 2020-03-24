@@ -954,22 +954,81 @@ for(let i = 0; i <liEven.length; i++) {
 } */
  
 
-// 025 Traversing the DOM
+/* // 025 Traversing the DOM
 let value;
 
 const list = document.querySelector('ul.collection');
 const listItems = document.querySelector('li.collection-item:first-child');
-const listBody = document.querySelector('body');
-// value = listItems;
-// console.log(value);
+value = list;
+value = listItems;
 
 // GET CHILD NODES
-value = listBody.children;
-console.log(value);
+value = list.childNodes; 
+value = list.childNodes[0];
+value = list.childNodes[0].nodeName;
+value = list.childNodes[0].nodeType;
 
-value = listBody.childNodes;
-console.log(value);
+// 1- Element 
+// 2- Attrubute (deprecated0)
+// 3- Texy node 
+// 4- Commit 
+// 5- Document itself
+// 6- Doctype 
 
+// GET CHILDREN ELEMENT NODES
+value = list.children;
 value = list.children[0];
-value = list.children[1].textContent = 'Hello world';
-console.log(value);
+value = list.children[1];
+value = list.children[1].textContent = 'Hello Said';
+
+value = list.firstChild;
+value = list.firstElementChild;
+value = list.lastChild;
+value = list.lastElementChild;
+value = list.childElementCount;
+
+// GET PARENT NODE
+value = listItems.parentNode;
+value = listItems.parentElement;
+value = listItems.parentElement.parentElement;
+
+// GET NEXT SIBLING
+value = listItems.nextSibling;
+value = listItems.nextElementSibling;
+
+// GET PREVIES SIBLING
+value = listItems.previousSibling;
+value = listItems.previousElementSibling;
+
+console.log(value); */
+
+
+/* // 026 CREATING ELEMENTS
+const li = document.createElement('li');
+
+// ADD CLASS
+li.className = 'collection-item';
+
+// ADD ID
+li.id = 'new-id';
+
+// ADD ATTRIBUTE
+li.setAttribute('title', 'new item');
+
+// CREATE TEXT NODE AND APPEND
+li.appendChild(document.createTextNode('Hello world'));
+
+// APPEND LI AS CHILD TO UL
+document.querySelector('ul.collection').appendChild(li);
+
+// CREATE NEW LINK ELEMENT
+const link = document.createElement('a');
+link.className = 'class-field';
+link.id = 'id-field';
+link.appendChild(document.createTextNode('Hello said'));
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+console.log(link); */
+
+
+// 027 REMOVING REPLACING ELEMENTS
