@@ -1069,4 +1069,36 @@ value = link;
 console.log(value); */
 
 
-// 028 EVENT LISTENERS THE EVENT OBJECT
+/* // 028 EVENT LISTENERS THE EVENT OBJECT
+document.querySelector('.clear-tasks').addEventListener('click', 
+function(e) {
+    console.log('Hello world');
+    e.preventDefault();
+})
+
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+document.querySelector('.clear-tasks').addEventListener('mouseover', onClick);
+
+function onClick(e) {
+    console.log('Clicked');
+    let value;
+    value = e;
+    value = e.target;
+    value = e.target.id;
+    value = e.target.className;
+    value = e.target.classList;
+    value = e.target.innerText = 'Hello';
+
+    value = e.type;
+    value = e.timeStamp;
+    value = e.clientY;
+    value = e.clientX;
+    value = e.offsetY;
+    value = e.offsetX;
+
+
+    console.log(value);
+} */
+
+
+// 029 MOUSE EVENTS
