@@ -1031,4 +1031,42 @@ link.innerHTML = '<i class="fa fa-remove"></i>';
 console.log(link); */
 
 
-// 027 REMOVING REPLACING ELEMENTS
+/* // 027 REMOVING REPLACING ELEMENTS
+// CREATE ELEMENT
+const newHeading = document.createElement('h2');
+newHeading.id = 'task-title';
+newHeading.appendChild(document.createTextNode('Task List'));
+
+const oldHeading = document.getElementById('task-title');
+const cardAction = document.querySelector('.card-action');
+cardAction.replaceChild(newHeading, oldHeading);
+
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+lis[0].remove();
+list.removeChild(lis[1]);
+console.log(document.querySelectorAll('.collection-item'));
+
+// CLASSES AND ATRIBUTE
+const firstLi = document.querySelector('li:first-child');
+console.log(firstLi.children[0]);
+
+let value;
+value = firstLi.className;
+value = firstLi.classList;
+firstLi.add('test');
+value = firstLi;
+
+const link = document.createElement('a');
+value = link.getAttribute('href');
+value = link.setAttribute('href', 'http://google.com');
+link.setAttribute('title', 'Google');
+value = link.hasAttribute('title');
+link.removeAttribute('title');
+value = link;
+
+console.log(value); */
+
+
+// 028 EVENT LISTENERS THE EVENT OBJECT
