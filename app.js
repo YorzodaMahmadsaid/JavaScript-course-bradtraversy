@@ -1171,3 +1171,78 @@ function runEvent(e) {
     e.preventDefault();
 } */
 
+
+/* // 031 EVENT BUBBLING DELEGATION
+document.querySelector('.container').addEventListener('click', function() {
+    console.log('Container is clicked');
+})
+
+document.querySelector('.heading').addEventListener('click', function() {
+    console.log('Heading is clicked');
+})
+
+document.querySelector('.collection').addEventListener('click', function() {
+    console.log('Collection is clicked');
+})
+document.querySelector('.collection-item').addEventListener('click', function() {
+    console.log('Collection item is clicked');
+})
+
+document.querySelector('.collection-item').addEventListener('click', deleteItem);
+
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e) {
+    if(e.target.className === 'collection-item') {
+        console.log('delete item');
+        e.target.remove();
+    }
+} */
+
+
+/* // 032 LOCAL AND SESSION STORAGE
+// SET LOCAL STORAGE ITEM
+localStorage.setItem('name', 'Said');
+localStorage.setItem('age', '31');
+
+// SET SESSION STORAGE ITEM
+sessionStorage.setItem('age', '31');
+
+// REMOVE FROM LOCAL STORAGE 
+localStorage.removeItem('name');
+
+// GET ITEM FROM LOCAL STORAGE
+const name = localStorage.getItem('name');
+const age = localStorage.getItem('age');
+
+localStorage.clear();
+console.log(name, age);
+
+document.querySelector('form').addEventListener('click', 
+function(e) {
+    const task = document.getElementById('taskInputId').value;
+
+    let tasks;
+
+    if(localStorage.getItem('tasks') === null) {
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+
+    tasks.push(task);
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    e.preventDefault();
+})
+
+const tasks = JSON.parse(localStorage.getItem('tasks'));
+
+tasks.forEach(function(task) {
+    console.log(task);
+}); */
+
+
+// 04 DOM PROJECT
+// TASK LIST PART 1 - IU ADD TASK ITEMS
