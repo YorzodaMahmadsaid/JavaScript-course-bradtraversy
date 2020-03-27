@@ -1131,17 +1131,43 @@ function runEvent(e) {
 } */
 
 
-// 030 KEYBORD INPUT EVENTS
+/* // 030 KEYBORD INPUT EVENTS
 const form = document.querySelector('form');
-const taskInput = document.getElementById('task');
+const taskInput = document.getElementById('taskInputId');
+const heading = document.querySelector('h5');
+const select = document.querySelector('select');
 
-// form.addEventListener('submit', runEvent );
+taskInput.value = '';
+
+form.addEventListener('submit', runEvent );
 
 taskInput.addEventListener('keydown', runEvent);
 
+taskInput.addEventListener('keyup', runEvent);
+
+taskInput.addEventListener('keypress', runEvent);
+
+taskInput.addEventListener('focus', runEvent);
+
+taskInput.addEventListener('blur', runEvent);
+
+taskInput.addEventListener('cut', runEvent);
+
+taskInput.addEventListener('paste', runEvent);
+
+taskInput.addEventListener('input', runEvent);
+
+taskInput.addEventListener('input', runEvent);
+
+select.addEventListener('change', runEvent);
+
+
+
 function runEvent(e) {
     console.log(`event type: ${e.type}`);
-    // console.log(taskInput.value);
-    // e.preventDefault();
+    console.log(e.target.value);
+    heading.innerText = e.target.value;
     
-}
+    e.preventDefault();
+} */
+
