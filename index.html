@@ -12,7 +12,36 @@
 </head>
 <body>
    <h1 class="titleText display-4">TODO LIST</h1>
-    <div class="container rounded bg-light py-4">
+   <div class="container">
+       <div class="row">
+           <div class="col">
+               <div id="main" class="card">
+                   <div class="card-content">
+                       <span class="card-title">Task list</span>
+                       <div class="row">
+                           <form id="task-form">
+                               <div class="input-field col s12">
+                                  <input type="text" name="task" id="task">
+                                   <label for="task">New task</label>
+                               </div>
+                               <input type="submit" value="Add task" class="btn">
+                           </form>
+                       </div>
+                   </div>
+                   <div class="card-action">
+                       <h5 id="task-title">Tasks</h5>
+                       <div class="input-field col s12">
+                        <input type="text" name="filter" id="filter">
+                        <label for="filter">Filter tasks</label>
+                    </div>
+                    <ul class="collection"></ul>
+                    <a href="#" class="clear-tasks btn black">Clear tasks</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+    <!-- <div class="container rounded bg-light py-4">
         <label class="mdc-text-field" style="width: 87%; height: 40px">
             <input type="text" class="mdc-text-field__input bg-white" aria-labelledby="my-label">
             <span class="mdc-floating-label" id="my-label">Введите текст</span>
@@ -71,7 +100,7 @@
             <li class="collection-item">Two</li>
             <li class="collection-item">Three</li>
         </ul>
-    </div>    
+    </div>   -->  
     
     
 <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
