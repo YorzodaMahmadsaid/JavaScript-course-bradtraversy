@@ -1244,7 +1244,7 @@ tasks.forEach(function(task) {
 }); */
 
 
-// 04 DOM PROJECT
+/* // 04 DOM PROJECT
 // TASK LIST PART 1 - IU ADD TASK ITEMS    
  const form = document.querySelector('#task-form');
  const taskList = document.querySelector('.collection');
@@ -1280,4 +1280,75 @@ tasks.forEach(function(task) {
      taskInput.value = '';
 
     e.preventDefault();
+ } */
+
+
+ /* // 034 TASK LIST PART 2 - DELETE FILTER TASKS
+ const form = document.querySelector('#task-form');
+ const taskList = document.querySelector('.collection');
+ const clearBtn = document.querySelector('.clear-tasks');
+ const filter = document.querySelector('#filter');
+ const taskInput = document.querySelector('#task');
+
+ loadEventListeners();
+
+ function loadEventListeners() {
+     form.addEventListener('submit', addTask);
+     taskList.addEventListener('click', removeTask);
+     clearBtn.addEventListener('click', clearTasks);
+     filter.addEventListener('keyup', filterTasks);
  }
+
+ function addTask(e) {
+     if(taskInput.value === '' || taskInput.value === ' ') {
+         alert('Add the task');
+     }
+
+     const li = document.createElement('li');
+     li.className = 'collection-item';
+     li.id = 'task-list';
+     li.appendChild(document.createTextNode(taskInput.value));
+
+     const link = document.createElement('a');
+     link.className = 'delete-item secondary-conent';
+     link.innerHTML = '<i class="fa fa-remove"></i>';
+     li.appendChild(link);
+
+     taskList.appendChild(li);
+
+     taskInput.value = '';
+
+    e.preventDefault();
+ }
+
+ function removeTask(e) {
+     if(e.target.className === 'collection-item' || e.target.id === 'task-list') {
+        if(confirm('Are you sure?')) {
+           e.target.remove(); 
+        }
+     }
+ }
+
+ function clearTasks() {
+    //  taskList.innerHTML = '';
+    while(taskList.firstChild) {
+        taskList.removeChild(taskList.firstChild);
+    }
+ }
+
+ function filterTasks(e) {
+    const text = e.target.value.toLowerCase();
+    document.querySelectorAll('.collection-item').
+    forEach(function(task) {
+        const item = task.firstChild.textContent;
+        if(item.toLowerCase().indexOf(text) != -1) {
+            task.style.display = 'block';
+        } else {
+            task.style.display = 'none';
+        }
+    })
+ } */
+
+
+ // 035 TASK LIST PART 3 - PERSIST OT LOCAL STOR
+ 
