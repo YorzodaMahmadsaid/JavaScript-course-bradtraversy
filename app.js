@@ -1350,7 +1350,7 @@ tasks.forEach(function(task) {
  } */
 
 
- /* // 035 TASK LIST PART 3 - PERSIST TO LOCAL STOR
+/*  // 035 TASK LIST PART 3 - PERSIST TO LOCAL STOR
  const form = document.querySelector('#task-form');
  const taskList = document.querySelector('.collection');
  const clearBtn = document.querySelector('.clear-tasks');
@@ -1393,26 +1393,26 @@ tasks.forEach(function(task) {
 
  function addTask(e) {
      if(taskInput.value === '' || taskInput.value === ' ') {
-         alert('Add the task');
+         alert('Add the task please');
+     } else {
+        const li = document.createElement('li');
+        li.className = 'collection-item';
+        li.id = 'task-list';
+        li.appendChild(document.createTextNode(taskInput.value));
+
+        const link = document.createElement('a');
+        link.className = 'delete-item secondary-conent';
+        link.innerHTML = '<i class="fa fa-remove"></i>';
+        li.appendChild(link);
+
+        taskList.appendChild(li);
+
+        storeTaskInLocalStorage(taskInput.value);
+
+        taskInput.value = '';
+
+        e.preventDefault();
      }
-
-     const li = document.createElement('li');
-     li.className = 'collection-item';
-     li.id = 'task-list';
-     li.appendChild(document.createTextNode(taskInput.value));
-
-     const link = document.createElement('a');
-     link.className = 'delete-item secondary-conent';
-     link.innerHTML = '<i class="fa fa-remove"></i>';
-     li.appendChild(link);
-
-     taskList.appendChild(li);
-
-     storeTaskInLocalStorage(taskInput.value);
-
-     taskInput.value = '';
-
-    e.preventDefault();
  }
 
  function storeTaskInLocalStorage(task) {
@@ -1435,6 +1435,7 @@ tasks.forEach(function(task) {
         if(confirm('Are you sure?')) {
            e.target.remove(); 
            removeTaskFromLocalStorage(e.target)
+           console.log(e.target)
         }
      } 
  }
