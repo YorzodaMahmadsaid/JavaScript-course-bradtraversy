@@ -10,8 +10,78 @@
     <link rel="stylesheet" href="styles.css">
     <title>JavaScript</title>
 </head>
-<body>
-   <h1 class="titleText display-4">TODO LIST</h1>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+                    <form id="loan-form">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">$</span>
+                                </div>
+                                <input type="number" class="form-control" placeholder="Loan Amount" id="amount">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">%</span>
+                                </div>
+                                <input type="number" class="form-control" id="Interest" placeholder="Interest">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control" id="years" placeholder="Years to repay">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <input type="submit" value="Calculate" class="btn btn-dark btn-block" id="years">
+                            </div>
+                        </div>
+                    </form>
+                    <!--LOADER HERE-->
+                    <div id="loading">
+                        <img src="img/loading.gif" alt="loading">
+                    </div>
+                    <!--RESULTS-->
+                    <div id="results">
+                      <h5>Result</h5>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">Monthly payment</span>
+                                </div>
+                                <input type="number" class="form-control" id="monthly-payment" disabled>
+                            </div>
+                        </div>  
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">Total payment</span>
+                                </div>
+                                <input type="number" class="form-control" id="total-payment" disabled>
+                            </div>
+                        </div>  
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">Total interest</span>
+                                </div>
+                                <input type="number" class="form-control" id="total-interest" disabled>
+                            </div>
+                        </div>  
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  <!--  <h1 class="titleText display-4">TODO LIST</h1>
    <div class="container">
        <div class="row">
            <div class="col">
@@ -40,7 +110,7 @@
                </div>
            </div>
        </div>
-   </div>
+   </div> -->
     <!-- <div class="container rounded bg-light py-4">
         <label class="mdc-text-field" style="width: 87%; height: 40px">
             <input type="text" class="mdc-text-field__input bg-white" aria-labelledby="my-label">
