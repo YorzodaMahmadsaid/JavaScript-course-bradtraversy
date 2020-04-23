@@ -1484,5 +1484,22 @@ tasks.forEach(function(task) {
     })
  } */
 
+  
+ // 036 LOAN CALCULATOR PART 1 - BUILD THE UI 
 
- // 036 LOAN CALCULATOR PART 1 - BUILD THE UI
+ // LISTEN FOR SUBMIT
+ document.getElementById('loan-form').addEventListener('submit', calculateResults);
+
+ //CALCULATE RESULTS
+ function calculateResults(event) {
+     const amount = document.getElementById('amount');
+     const interest = document.getElementById('interest');
+     const years = document.getElementById('years');
+     const monthlyPayment = document.getElementById('monthly-payment');
+     const totalPayment = document.getElementById('total-payment');
+     const totalInterest = document.getElementById('total-interest');
+
+     console.log(amount);
+
+     event.preventDefault();
+ }
