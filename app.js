@@ -1561,12 +1561,26 @@ maxNum.textContent = max;
 guessBtn.addEventListener('click', function(){
 
     let guess = parseInt(guessInput.value);
+    console.log(guess);
 
-    if(isNan(guess) || guess < min || guess > max ) {
-        setMessage(`Please enter number between ${min} and ${max}`);
+    if(guess >= min || guess < max && guess === winningNum){
+        guessInput.style.borderColor = 'red';
+        setMessage('Incorrect!', 'red');
+    }
+
+    if(isNaN(guess) || guess < min || guess > max ) {
+        setMessage(`Please enter number between ${min} and ${max}`, 'red');
+        guessInput.style.borderColor = 'red';
+    }
+
+    if(guess === winningNum){
+        guessInput.disabled = true;
+        guessInput.style.borderColor = 'green';
+        setMessage(`${winningNum} is correct, you win!`, 'green')
     }
 });
 
-function setMessage(msg) {
+function setMessage(msg, color) {
+    message.style.color = color;
     message.textContent = msg;
 }
