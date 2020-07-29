@@ -1485,10 +1485,15 @@ tasks.forEach(function(task) {
  } */
 
   
- // 036 LOAN CALCULATOR PART 1 - BUILD THE UI 
+ // 037 LOAN CALCULATOR PART 1 - BUILD THE UI
 
  // LISTEN FOR SUBMIT
- document.getElementById('loan-form').addEventListener('submit', calculateResults);
+/* document.getElementById('loan-form').addEventListener('submit', function(e) {
+     document.getElementById('results').style.display = 'none';
+     document.getElementById('loading').style.display = 'block';
+     setTimeout(calculateResults, 1000);
+     e.preventDefault();
+ });
 
  //CALCULATE RESULTS
  function calculateResults(event) {
@@ -1499,7 +1504,69 @@ tasks.forEach(function(task) {
      const totalPayment = document.getElementById('total-payment');
      const totalInterest = document.getElementById('total-interest');
 
-     console.log(amount);
+     const principal = parseFloat(amount.value);
+     const calculatedInterest = parseFloat(interest.value) / 100 / 12;
+     const calculatedPayments = parseFloat(years.value) * 12;
+
+     // Compute monthly payment
+     const x = Math.pow(1 + calculatedInterest, calculatedPayments);
+     const monthly = (principal*x*calculatedInterest)/(x-1);
+
+     if(isFinite(monthly)) {
+         monthlyPayment.value = monthly.toFixed(2);
+         totalPayment.value = (monthly*calculatedPayments).toFixed(2);
+         totalInterest.value = ((monthly*calculatedPayments)-principal).toFixed(2);
+
+         document.getElementById('results').style.display = 'block';
+         document.getElementById('loading').style.display = 'none';
+     } else {
+        showError('Please check your numbers');
+     }
 
      event.preventDefault();
  }
+
+ function showError(error) {
+     document.getElementById('loading').style.display = 'none';
+     document.getElementById('results').style.display = 'none';
+     const errorDiv = document.createElement('div');
+     const card = document.querySelector('.card');
+     const heading = document.querySelector('.heading');
+     errorDiv.className = 'alert alert-danger';
+     errorDiv.appendChild(document.createTextNode(error));
+     card.insertBefore(errorDiv, heading);
+     setTimeout(clearError, 2000);
+ }
+
+ function clearError() {
+     document.querySelector('.alert').remove();
+ }*/
+
+ // 40 NUMBER GUESSER PART 2 //
+let min = 1,
+    max = 10,
+    winningNum = 2,
+    guessesLeft = 3;
+
+const game = document.querySelector('#game'),
+       minNum = document.querySelector('.min-num'),
+       maxNum = document.querySelector('.max-num'),
+       guessBtn = document.querySelector('#guess-btn'),
+       guessInput = document.querySelector('#guess-input'),
+       message = document.querySelector('.message');
+
+minNum.textContent = min;
+maxNum.textContent = max;
+
+guessBtn.addEventListener('click', function(){
+
+    let guess = parseInt(guessInput.value);
+
+    if(isNan(guess) || guess < min || guess > max ) {
+        setMessage(`Please enter number between ${min} and ${max}`);
+    }
+});
+
+function setMessage(msg) {
+    message.textContent = msg;
+}

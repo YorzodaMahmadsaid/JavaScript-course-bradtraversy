@@ -1,3 +1,7 @@
 .titleText{
     text-align: center;
 }
+
+#loading, #results {
+    display: none;
+}
