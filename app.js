@@ -1542,10 +1542,10 @@ tasks.forEach(function(task) {
      document.querySelector('.alert').remove();
  }*/
 
- // 40 NUMBER GUESSER PART 2 //
-let min = 1,
+ // 40, 41, 42 NUMBER GUESSER//
+/*let min = 1,
     max = 10,
-    winningNum = 2,
+    winningNum = getRandomNum(min, max),
     guessesLeft = 3;
 
 const game = document.querySelector('#game'),
@@ -1561,12 +1561,6 @@ maxNum.textContent = max;
 guessBtn.addEventListener('click', function(){
 
     let guess = parseInt(guessInput.value);
-    console.log(guess);
-
-    if(guess >= min || guess < max && guess === winningNum){
-        guessInput.style.borderColor = 'red';
-        setMessage('Incorrect!', 'red');
-    }
 
     if(isNaN(guess) || guess < min || guess > max ) {
         setMessage(`Please enter number between ${min} and ${max}`, 'red');
@@ -1574,13 +1568,47 @@ guessBtn.addEventListener('click', function(){
     }
 
     if(guess === winningNum){
-        guessInput.disabled = true;
-        guessInput.style.borderColor = 'green';
-        setMessage(`${winningNum} is correct, you win!`, 'green')
+        gameOver(true, `${winningNum} is correct, you win!`);
+    } else {
+        guessesLeft -= 1;
+
+        if(guessesLeft === 0) {
+            gameOver(false, `Game over, you lost. The correct number was ${winningNum}`);
+        } else {
+            guessInput.style.borderColor = 'red';
+            guessInput.value = '';
+            setMessage(`${guess} is not correct, ${guessesLeft} guesses left`, 'red')
+        }
     }
 });
 
+game.addEventListener('mousedown', function(e) {
+    if(e.target.className === 'play-again') {
+        window.location.reload();
+    }
+});
+
+function gameOver(won, msg) {
+
+    let color;
+    won === true? color = 'green' : color = 'red';
+    guessInput.disabled = true;
+    guessInput.style.borderColor = color;
+    message.style.color = color;
+    setMessage(msg);
+
+    guessBtn.value = 'Play Again';
+    guessBtn.className += 'play-again';
+}
+
+function getRandomNum(min, max) {
+    Math.floor(Math.random()*(max-min+1)+min);
+} 
+
 function setMessage(msg, color) {
     message.style.color = color;
-    message.textContent = msg;
-}
+    message.textContent = msg; 
+} */
+
+//05 Object Oriented JavaScript - ES5  ESE5//
+// 43 CONSTRUCTOR THE THIS KEYWORD // 
