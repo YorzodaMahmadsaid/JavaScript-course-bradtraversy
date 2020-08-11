@@ -1612,3 +1612,136 @@ function setMessage(msg, color) {
 
 //05 Object Oriented JavaScript - ES5  ESE5//
 // 43 CONSTRUCTOR THE THIS KEYWORD // 
+/* const brad = {
+    name: 'Brad',
+    age: 30
+}
+
+console.log(brad);
+console.log(brad.name);
+console.log(brad.age); */
+
+/* function Person() {
+    this.name = 'Brad';
+}
+ 
+const brad = new Person();
+const john = new Person();
+
+console.log(brad); // Person {name: 'Brad'} //
+console.log(john); // Person {name: 'Brad'} // */
+
+/* function Person(name) {
+    this.name = name;
+    console.log(this);
+}
+
+const brad = new Person('Brad');
+const john = new Person('John');
+
+console.log(john); // Person {name: 'John'} // 
+console.log(brad); // Person {name: 'Brad'} // */
+
+/* function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+const brad = new Person('Brad', 36);
+const john = new Person('John', 30);
+
+console.log(john.age); // 30 //
+console.log(brad.age); // 36 // */
+
+/* function Person(name, dob) {
+    this.name = name;
+    this.birthday = new Date(dob);
+    this.calculateAge = function() {
+        const diff = Date.now() - this.birthday.getTime();
+        const ageDate = new Date(diff);
+        return Math.abs(ageDate.getUTCFullYear() - 1990);
+    }
+}
+
+const brad = new Person('Brad', 1990);
+console.log(brad.calculateAge()); // 30 // */
+
+/* // 44  BUILD IN CONSTRUCTORS //
+
+const name1 = 'Jeff';
+const name2 = new String('Jeff');
+
+console.log(name1); // Jeff // 
+console.log(name2); // String {Jeff} //
+
+console.log(typeof name1); // String // 
+console.log(typeof name2); // object //
+
+if(name1 === 'Jeff') {
+    console.log('Yes'); // Yes //
+} else {
+    console.log('No');
+}
+
+if(name2 === 'Jeff') {
+    console.log('Yes');
+} else {
+    console.log('No'); // No //
+}
+
+const num1 = 5;
+const num2 = new Number(5);
+
+console.log(num2); // Number {5} //
+console.log(typeof num2); // object //
+
+const bool1 = true;
+const bool2 = new Boolean(true);
+
+console.log(typeof bool1); // boolean //
+console.log(typeof bool2); // object // 
+
+const getSum1 = function(x, y) {
+    return x + y;
+}
+
+const getSum2 = new Function('x', 'y', 'return 1 + 2');
+
+console.log(getSum1(1, 2));
+console.log(getSum2(1, 2));
+
+const john1 = {name: 'John'};
+const john2 = new Object({name: 'John'})
+
+console.log(john1); // {name: 'John'} //
+console.log(john2); // {name: 'John'} //
+
+const array1 = [1,2,3,4];
+const array2 = new Array(1,2,3,4);
+
+console.log(array1); // (4) [1,2,3,4] //
+console.log(array2); // (4) [1,2,3,4] //
+
+const reg1 = /\w=/;
+const reg2 = new RegExp('\\w+');
+
+console.log(reg1);
+console.log(reg2); */
+
+// 045 PROTOTYPES EXPLAINED //
+
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthday = new Date(dob);
+    this.calculateAge = function() {
+        const diff = Date.now() - this.birthday.getTime();
+        const ageDate = new Date(diff);
+        return Math.abs(ageDate.getUTCFullYear() - 1990);
+    }
+}
+
+const john = new Person('John', 'Doe', '2-12-90');
+const mary = new Person('Mary', 'Johnson', 'March 20 1978');
+
+console.log(mary);
