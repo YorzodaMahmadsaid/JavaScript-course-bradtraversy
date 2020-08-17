@@ -419,7 +419,7 @@ document.body.innerHTML = html; */
 // console.log(myArray);
 
 // var array = [10, 20, 30, 40, 50]; 
-  
+
 // var found = array.find(function(element) { 
 //   return element > 10; 
 // }); 
@@ -427,7 +427,7 @@ document.body.innerHTML = html; */
 // var found = array.find(function(element) { 
 //   return element < 40; 
 // }); 
-  
+
 // console.log(found);
 
 
@@ -628,52 +628,52 @@ let day;
  console.log(`Today is ${day}`); */
 
 
- /* // 017 Function declarations expressions
- function greet() {
-     console.log('Hello');
- }
- greet();
+/* // 017 Function declarations expressions
+function greet() {
+    console.log('Hello');
+}
+greet();
 
- function greet() {
-     return 'Hello';
- }
- console.log(greet());
+function greet() {
+    return 'Hello';
+}
+console.log(greet());
 
- function greet(firstName, lastName) {
-     return 'Hello ' + firstName + ' ' + lastName;
- }
- console.log(greet('Said', 'Yorzoda'));
+function greet(firstName, lastName) {
+    return 'Hello ' + firstName + ' ' + lastName;
+}
+console.log(greet('Said', 'Yorzoda'));
 
- function greet(firstName = 'Mahmadsaid', lastName = 'Yorzoda') {
-     return 'Hello ' + firstName + ' ' + lastName;
- }
- console.log(greet());
+function greet(firstName = 'Mahmadsaid', lastName = 'Yorzoda') {
+    return 'Hello ' + firstName + ' ' + lastName;
+}
+console.log(greet());
 
- var square = function(x) {
-     return x*x;
- }
+var square = function(x) {
+    return x*x;
+}
 console.log(square(2));
 
 (function() {
-    console.log('Hello my friend');
+   console.log('Hello my friend');
 })();
 
 (function(name) {
-    console.log('Hello ' + name)
+   console.log('Hello ' + name)
 })('Said');
 
- const todo = {
-     add: function() {
-         console.log('Add todo');
-     },
-     edit: function(id) {
-         console.log(`Edit todo ${id}`)
-     }
- }
+const todo = {
+    add: function() {
+        console.log('Add todo');
+    },
+    edit: function(id) {
+        console.log(`Edit todo ${id}`)
+    }
+}
 
- todo.delete = function() {
-     console.log('Delete todo');
- }
+todo.delete = function() {
+    console.log('Delete todo');
+}
 
 todo.delete(); 
 todo.add();
@@ -952,7 +952,7 @@ for(let i = 0; i <liEven.length; i++) {
     liEven[i].style.background = 'black';
     liEven[i].style.color = 'white';
 } */
- 
+
 
 /* // 025 Traversing the DOM
 let value;
@@ -1283,71 +1283,71 @@ tasks.forEach(function(task) {
  } */
 
 
- /* // 034 TASK LIST PART 2 - DELETE FILTER TASKS
- const form = document.querySelector('#task-form');
- const taskList = document.querySelector('.collection');
- const clearBtn = document.querySelector('.clear-tasks');
- const filter = document.querySelector('#filter');
- const taskInput = document.querySelector('#task');
+/* // 034 TASK LIST PART 2 - DELETE FILTER TASKS
+const form = document.querySelector('#task-form');
+const taskList = document.querySelector('.collection');
+const clearBtn = document.querySelector('.clear-tasks');
+const filter = document.querySelector('#filter');
+const taskInput = document.querySelector('#task');
 
- loadEventListeners();
+loadEventListeners();
 
- function loadEventListeners() {
-     form.addEventListener('submit', addTask);
-     taskList.addEventListener('click', removeTask);
-     clearBtn.addEventListener('click', clearTasks);
-     filter.addEventListener('keyup', filterTasks);
- }
+function loadEventListeners() {
+    form.addEventListener('submit', addTask);
+    taskList.addEventListener('click', removeTask);
+    clearBtn.addEventListener('click', clearTasks);
+    filter.addEventListener('keyup', filterTasks);
+}
 
- function addTask(e) {
-     if(taskInput.value === '' || taskInput.value === ' ') {
-         alert('Add the task');
-     }
-
-     const li = document.createElement('li');
-     li.className = 'collection-item';
-     li.id = 'task-list';
-     li.appendChild(document.createTextNode(taskInput.value));
-
-     const link = document.createElement('a');
-     link.className = 'delete-item secondary-conent';
-     link.innerHTML = '<i class="fa fa-remove"></i>';
-     li.appendChild(link);
-
-     taskList.appendChild(li);
-
-     taskInput.value = '';
-
-    e.preventDefault();
- }
-
- function removeTask(e) {
-     if(e.target.className === 'collection-item' || e.target.id === 'task-list') {
-        if(confirm('Are you sure?')) {
-           e.target.remove(); 
-        }
-     }
- }
-
- function clearTasks() {
-    //  taskList.innerHTML = '';
-    while(taskList.firstChild) {
-        taskList.removeChild(taskList.firstChild);
+function addTask(e) {
+    if(taskInput.value === '' || taskInput.value === ' ') {
+        alert('Add the task');
     }
- }
 
- function filterTasks(e) {
-    const text = e.target.value.toLowerCase();
-    document.querySelectorAll('.collection-item').
-    forEach(function(task) {
-        const item = task.firstChild.textContent;
-        if(item.toLowerCase().indexOf(text) != -1) {
-            task.style.display = 'block';
-        } else {
-            task.style.display = 'none';
-        }ь  
-    })
- } */
+    const li = document.createElement('li');
+    li.className = 'collection-item';
+    li.id = 'task-list';
+    li.appendChild(document.createTextNode(taskInput.value));
+
+    const link = document.createElement('a');
+    link.className = 'delete-item secondary-conent';
+    link.innerHTML = '<i class="fa fa-remove"></i>';
+    li.appendChild(link);
+
+    taskList.appendChild(li);
+
+    taskInput.value = '';
+
+   e.preventDefault();
+}
+
+function removeTask(e) {
+    if(e.target.className === 'collection-item' || e.target.id === 'task-list') {
+       if(confirm('Are you sure?')) {
+          e.target.remove(); 
+       }
+    }
+}
+
+function clearTasks() {
+   //  taskList.innerHTML = '';
+   while(taskList.firstChild) {
+       taskList.removeChild(taskList.firstChild);
+   }
+}
+
+function filterTasks(e) {
+   const text = e.target.value.toLowerCase();
+   document.querySelectorAll('.collection-item').
+   forEach(function(task) {
+       const item = task.firstChild.textContent;
+       if(item.toLowerCase().indexOf(text) != -1) {
+           task.style.display = 'block';
+       } else {
+           task.style.display = 'none';
+       }ь  
+   })
+} */
 
 
 /*  // 035 TASK LIST PART 3 - PERSIST TO LOCAL STOR
@@ -1484,10 +1484,10 @@ tasks.forEach(function(task) {
     })
  } */
 
-  
- // 037 LOAN CALCULATOR PART 1 - BUILD THE UI
 
- // LISTEN FOR SUBMIT
+// 037 LOAN CALCULATOR PART 1 - BUILD THE UI
+
+// LISTEN FOR SUBMIT
 /* document.getElementById('loan-form').addEventListener('submit', function(e) {
      document.getElementById('results').style.display = 'none';
      document.getElementById('loading').style.display = 'block';
@@ -1542,7 +1542,7 @@ tasks.forEach(function(task) {
      document.querySelector('.alert').remove();
  }*/
 
- // 40, 41, 42 NUMBER GUESSER//
+// 40, 41, 42 NUMBER GUESSER//
 /*let min = 1,
     max = 10,
     winningNum = getRandomNum(min, max),
@@ -1734,14 +1734,141 @@ function Person(firstName, lastName, dob) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.birthday = new Date(dob);
-    this.calculateAge = function() {
-        const diff = Date.now() - this.birthday.getTime();
-        const ageDate = new Date(diff);
-        return Math.abs(ageDate.getUTCFullYear() - 1990);
-    }
+    // this.calculateAge = function() {
+    //     const diff = Date.now() - this.birthday.getTime();
+    //     const ageDate = new Date(diff);
+    //     return Math.abs(ageDate.getUTCFullYear() - 1990);
+    // }
+}
+
+/* Person.prototype.calculateAge = function () {
+    const diff = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(diff);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+Person.prototype.getFullName = function () {
+    return `${this.firstName} ${this.lastName}`
+}
+
+Person.prototype.getsMaried = function (newLastName) {
+    this.lastName = newLastName;
 }
 
 const john = new Person('John', 'Doe', '2-12-90');
-const mary = new Person('Mary', 'Johnson', 'March 20 1978');
+const mary = new Person('Mary', 'Johnson', 'March 20 1991');
+
+console.log(mary.calculateAge());
+console.log(john.calculateAge());
+
+console.log(mary.getFullName());
+console.log(john.getFullName());
+
+mary.getsMaried('Yorzoda');
+console.log(mary.getFullName());
+
+console.log(mary.hasOwnProperty('firstName'));
+console.log(mary.hasOwnProperty('getFullName')); */
+
+/* // 046 PROTOTYPE INHERITANCE
+
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+
+Person.prototype.greeting = function() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
+}
+
+const person1 = new Person('Yorzoda', 'Mahmadsaid');
+// console.log(person1.greeting()); 
+
+function Customer(firstName, lastName, phone, membership) {
+    Person.call(this, firstName, lastName);
+
+    this.phone = phone;
+    this.membership = membership;
+}
+
+Customer.prototype = Object.create(Person.prototype);
+Customer.prototype.constructor = Customer;
+
+const customer1 = new Customer('Tom', 'Smith', '444-444-444', 'Standart');
+console.log(customer1);
+
+Customer.prototype.greeting = function() {
+    return `Hello there ${this.firstName} ${this.lastName} welcome to our company`;
+}
+
+console.log(customer1.greeting());  */
+
+/* // 047 USING OBJECT CREATE
+
+const personPrototype = {
+    greeting: function() {
+        return `Hello there ${this.firstName} ${this.lastName}`;
+    }, 
+    getsMaried: function(newLastName) {
+        this.lastName = newLastName;
+    }
+}
+
+const mary = Object.create(personPrototype);
+mary.firstName = 'Mary';
+mary.lastName = 'Williams';
+mary.age = 30;
+
+mary.getsMaried('Yorzoda');
+
+console.log(mary.greeting());
+
+const brad = Object.create(personPrototype, {
+    firstName: {value: 'Brad'},
+    lastName: {value: 'Traversy'},
+    age: {value: 36}
+});
+
+console.log(brad);
+
+console.log(brad.greeting()); */
+
+
+// 048 ES6 CLASSES
+
+class Person1 {
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = new Date(dob);
+    }
+
+    greeting() {
+        return `Hello there ${this.firstName} ${this.lastName}`;
+    }
+
+    calculateAge() {
+        const diff = Date.now() - this.birthday.getTime();
+        const ageDate = new Date(diff);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+
+    getsMerried(newLastName) {
+        this.lastName = newLastName;
+    }
+
+    static addNumbers(x, y) {
+        return x + y;
+    }
+}
+
+const mary = new Person1('Yorzoda', 'Mahmadsaid', '11-13-1990');
 
 console.log(mary);
+console.log(mary.greeting());
+console.log(mary.calculateAge());
+
+mary.getsMerried('Jonon');
+console.log(mary);
+
+console.log(Person1.addNumbers(1, 2));
