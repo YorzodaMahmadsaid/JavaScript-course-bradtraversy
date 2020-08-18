@@ -1,7 +1,17 @@
-.titleText{
-    text-align: center;
+.success, error {
+    color: white;
+    padding: 5px;
+    margin: 5px 0 15px 0;
 }
 
-#loading, #results {
-    display: none;
+.success {
+    background: green;
+}
+
+.error {
+    background: red;
+}
+
+.submit-button {
+    margin-top: 20px;
 }
