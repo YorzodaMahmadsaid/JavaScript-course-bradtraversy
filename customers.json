@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Mahmadsaid",
+        "company": "Abad",
+        "phone": 44444222
+    },
+
+    {
+        "id": 2,
+        "name": "Yorzoda",
+        "company": "Bloom",
+        "phone": 77777222
+    },
+
+    {
+        "id": 3,
+        "name": "Mahmadsaid",
+        "company": "Bulma",
+        "phone": 882888833222
+    }
+]
