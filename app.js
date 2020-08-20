@@ -2204,7 +2204,7 @@ function loadCustomers(e) {
     xhr.send();
 } */
 
-// 060 GETTING DATA FROM AN EXTERNAL API
+/* // 060 GETTING DATA FROM AN EXTERNAL API
 document.querySelector('.get-jokes').addEventListener('click', getJokes);
 
 function getJokes(e) {
@@ -2237,11 +2237,57 @@ function getJokes(e) {
     xhr.send();
 
     e.preventDefault();
+} */
+
+
+/* // 062 CALLBACK FUNCTION
+
+const posts = [
+    {title: 'Post One', body: 'This is post one'},
+    {title: 'Post Two', body: 'This is post two'}
+];
+
+function createPost() {
+    setTimeout(function(post) {
+        posts.push(post); 
+    }, 2000);
 }
 
+function getPosts() {
+    setTimeout(function() {
+        let output = '';
+        posts.forEach(function(post) {
+            output += `<li>${post.title}</li>`;
+        });
+        document.body.innerHTML = output;
+    }, 1000);
+}
 
-// 061 REST APIs HTTP REQUESTS
+createPost({title: 'Post Three', body: 'This is post three'});
 
+getPosts();
+
+function createPost(post, callback) {
+    setTimeout(function() {
+        posts.push(post); 
+        callback();
+    }, 2000);
+}
+
+function getPosts() {
+    setTimeout(function() {
+        let output = '';
+        posts.forEach(function(post) {
+            output += `<li>${post.title}</li>`;
+        });
+        document.body.innerHTML = output;
+    }, 1000);
+}
+
+createPost({title: 'Post Three', body: 'This is post three'}, getPosts); */
+
+
+// 63 CUSTOM AJAX LIBRARY PART 1
 
 
 
