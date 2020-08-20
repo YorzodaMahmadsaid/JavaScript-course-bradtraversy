@@ -2287,7 +2287,49 @@ function getPosts() {
 createPost({title: 'Post Three', body: 'This is post three'}, getPosts); */
 
 
-// 63 CUSTOM AJAX LIBRARY PART 1
+/* // 63 CUSTOM AJAX LIBRARY PART 1
+
+function easyHTTP() {
+    this.http = new XMLHttpRequest;
+}
+
+easyHTTP.prototype.get = function(url, callback) {
+    this.http.open('GET', url, true);
+
+    let self = this;
+    this.http.onload = function() {
+        if(self.http.status === 200) {
+           callback(null, self.http.responseText);
+        } else {
+            callback('Error: ', + self.http.status);
+        }
+    }
+
+     this.http.send();
+}
+ 
+const http = new easyHTTP;
+
+http.get('https://jsonplaceholder.typicode.com/posts/1', 
+function(err, posts) {
+    if(err) {
+       console.log(err);  
+    } else {
+        console.log(posts);
+    }
+    console.log(posts);
+}); */
+
+// 64 CUSTOM HTTP LIBRARY (AJAX WITH CALLBACK PART 2)
+
+
+    
+
+
+
+
+
+
 
 
 
