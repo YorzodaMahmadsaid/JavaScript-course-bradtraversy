@@ -2288,6 +2288,7 @@ createPost({title: 'Post Three', body: 'This is post three'}, getPosts); */
 
 
 /* // 63 CUSTOM AJAX LIBRARY PART 1
+// 64 CUSTOM HTTP LIBRARY (AJAX WITH CALLBACK PART 2)
 
 function easyHTTP() {
     this.http = new XMLHttpRequest;
@@ -2310,7 +2311,7 @@ easyHTTP.prototype.get = function(url, callback) {
  
 const http = new easyHTTP;
 
-http.get('https://jsonplaceholder.typicode.com/posts/1', 
+http.get('https://jsonplaceholder.typicode.com/posts', 
 function(err, posts) {
     if(err) {
        console.log(err);  
@@ -2318,18 +2319,178 @@ function(err, posts) {
         console.log(posts);
     }
     console.log(posts);
+});
+easyHTTP.prototype.posts = function(url, data, callback) {
+    this.http.open('POST', url, true);
+    this.http.setRequestHeader('Content-type', 'application/json');
+    
+    let self = this;
+    this.http.onload = function() {
+    callback(null, self.http.responseText);
+    }
+
+    this.http.send(JSON.stringify(data));
+}
+
+
+const data = {
+    title: 'Custom Post',
+    body: 'This is a custom post'
+};
+
+http.posts('https://jsonplaceholder.typicode.com/posts', data, 
+function(err, post) {
+    if(err) {
+        console.log(err);  
+        } else {
+        console.log(post);
+        }
+});
+easyHTTP.prototype.put = function(url, data, callback) {
+    this.http.open('PUT', url, true);
+    this.http.setRequestHeader('Content-type', 'application/json');
+    
+    let self = this;
+    this.http.onload = function() {
+    callback(null, self.http.responseText);
+    }
+
+    this.http.send(JSON.stringify(data));
+}
+
+http.put('https://jsonplaceholder.typicode.com/posts/5', data, 
+function(err, post) {
+    if(err) {
+        console.log(err);  
+        } else {
+        console.log(post);
+        }
+});
+
+easyHTTP.prototype.delete = function(url, callback) {
+    this.http.open('DELETE', url, true);
+
+    let self = this;
+    this.http.onload = function() {
+        if(self.http.status === 200) {
+           callback(null, 'Post deleted');
+        } else {
+            callback('Error: ', + self.http.status);
+        }
+    }
+
+    this.http.send()
+}
+
+http.delete('https://jsonplaceholder.typicode.com/posts/1', 
+function(err, response) {
+    if(err) {
+        console.log(err);  
+        } else {
+        console.log(response);
+        }
 }); */
 
-// 64 CUSTOM HTTP LIBRARY (AJAX WITH CALLBACK PART 2)
 
+/* // 65 ES PROMISES
 
-    
+const posts = [
+    {title: 'Post one', body: 'This is post one'},
+    {title: 'Post two', body: 'This is post two'}
+];
 
+function createPost(post) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            posts.push(post);
 
+            const error = false;
 
+            if(!error) {
+                resolve();
+            } else {
+                reject('Error: Somthing went wrong');
+            }
+        }, 2000)
+    });
+}
 
+function getPosts() {
+    setTimeout(function() {
+        let output = '';
+        posts.forEach(function(post) {
+            output += `<li>${post.title}</li>`;
+        });
+        document.body.innerHTML = output;
+    }, 1000);
+}
 
+createPost({title: 'Post three', body: 'This is post three'}).then(getPosts)
+.catch(function(err) {
+    console.log(err);
+}); */
 
+/* // 66 FETCH API 
 
+document.getElementById('button1').addEventListener('click', getText);
+document.getElementById('button2').addEventListener('click', getJson);
+document.getElementById('button3').addEventListener('click', getExternal);
+
+function getExternal() {
+    fetch('https://api.github.com/users')
+    .then(function(res) {
+        return res.json();
+    })
+    .then(function(data) {
+        console.log(data); 
+        let output = '';
+        data.forEach(function(user) {
+            output += `
+            <li>${user.login}</li>
+            `
+        });
+        document.getElementById('output').innerHTML = output;
+    })
+    .catch(function(err) {
+        console.log(err);
+    })
+}
+
+function getJson() {
+    fetch('posts.json')
+    .then(function(res) {
+        return res.json();
+    })
+    .then(function(data) {
+        console.log(data); 
+        let output = '';
+        data.forEach(function(post) {
+            output += `
+            <li>${post.title}</li>
+            <li>${post.body}</li>
+            `
+        });
+        document.getElementById('output').innerHTML = output;
+    })
+    .catch(function(err) {
+        console.log(err);
+    })
+}
+
+function getText() {
+    fetch('test.txt')
+    .then(function(res) {
+        return res.text();
+    })
+    .then(function(data) {
+        console.log(data); 
+        document.getElementById('output').innerHTML = data;
+    })
+    .catch(function(err) {
+        console.log(err);
+    })
+} */
+
+// 67 ARROW FUNCTIONS
 
 
