@@ -2429,8 +2429,7 @@ createPost({title: 'Post three', body: 'This is post three'}).then(getPosts)
 .catch(function(err) {
     console.log(err);
 }); */
-
-/* // 66 FETCH API 
+// 66 FETCH API
 
 document.getElementById('button1').addEventListener('click', getText);
 document.getElementById('button2').addEventListener('click', getJson);
@@ -2489,8 +2488,47 @@ function getText() {
     .catch(function(err) {
         console.log(err);
     })
-} */
+}
 
-// 67 ARROW FUNCTIONS
+/* // 67 ARROW FUNCTIONS
+
+const sayHello = function() {
+    console.log('function one');
+}
+
+const sayHello = () => {
+    console.log('function two');
+}
+
+const sayHello = () => console.log('function three');
+
+const sayHello = () => 'function four';
+
+const sayHello = function() {
+    return 'function five';
+}
+
+const sayHello = () => ({msg: 'Hello'});
+
+const sayHello = name => console.log(`Hello ${name}`);
+
+const sayHello = (name, text) => console.log(`Hello ${name}. May i say ${text}`);
+
+sayHello('Mahmadsaid', 'Hello');
+
+const users = ['Said', 'Navruz', 'Behruz'];
+
+const nameLengths = users.map(function(name) {
+    return name.length;
+});
+
+const nameLengths = users.map(name => {
+    return name.length;
+});
+
+const nameLengths = users.map(name => name.length);
+
+console.log(nameLengths); */
+
 
 
