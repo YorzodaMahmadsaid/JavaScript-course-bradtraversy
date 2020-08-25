@@ -2429,7 +2429,7 @@ createPost({title: 'Post three', body: 'This is post three'}).then(getPosts)
 .catch(function(err) {
     console.log(err);
 }); */
-// 66 FETCH API
+/* // 66 FETCH API
 
 document.getElementById('button1').addEventListener('click', getText);
 document.getElementById('button2').addEventListener('click', getJson);
@@ -2488,7 +2488,7 @@ function getText() {
     .catch(function(err) {
         console.log(err);
     })
-}
+} */
 
 /* // 67 ARROW FUNCTIONS
 
@@ -2529,6 +2529,96 @@ const nameLengths = users.map(name => {
 const nameLengths = users.map(name => name.length);
 
 console.log(nameLengths); */
+
+// 68 CUSTOM HTTP LIBRARY (FETCH WITH PROMISES) -PART 3
+
+class EasyHTTP {
+
+    get(url) {
+        return new Promise((resolve, reject) => {
+            fetch(url)
+                .then(res => res.json())
+                .then(data => resolve(data))
+                .catch(err => reject(err));
+        });
+    }
+
+    post(url, data) {
+        return new Promise((resolve, reject) => {
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(res => res.json())
+                .then(data => resolve(data))
+                .catch(err => reject(err));
+        });
+    }
+
+    put(url, data) {
+        return new Promise((resolve, reject) => {
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(res => res.json())
+                .then(data => resolve(data))
+                .catch(err => reject(err));
+        });
+    }
+
+    delete(url, data) {
+        return new Promise((resolve, reject) => {
+            fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(res => res.json())
+                .then(() => resolve('Resource deleted...'))
+                .catch(err => reject(err));
+        });
+    }
+}
+
+const http = new EasyHTTP;
+
+const data = {
+    name: 'Mahmadsaid',
+    username: 'Yorzoda',
+    email: 'said@mail.com'
+}
+
+http.get('http://jsonplaceholder.typicode.com/users', data)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+
+http.post('http://jsonplaceholder.typicode.com/users', data)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+
+http.put('http://jsonplaceholder.typicode.com/users/2', data)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+
+http.delete('http://jsonplaceholder.typicode.com/users/2', data)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+
+
+
+
+
+
+
 
 
 
