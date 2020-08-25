@@ -2532,7 +2532,7 @@ console.log(nameLengths); */
 
 // 68 CUSTOM HTTP LIBRARY (FETCH WITH PROMISES) -PART 3
 
-class EasyHTTP {
+/*class EasyHTTP {
 
     get(url) {
         return new Promise((resolve, reject) => {
@@ -2595,9 +2595,9 @@ const data = {
     name: 'Mahmadsaid',
     username: 'Yorzoda',
     email: 'said@mail.com'
-}
+}*/
 
-http.get('http://jsonplaceholder.typicode.com/users', data)
+/*http.get('http://jsonplaceholder.typicode.com/users', data)
     .then(data => console.log(data))
     .catch(err => console.log(err));
 
@@ -2611,7 +2611,11 @@ http.put('http://jsonplaceholder.typicode.com/users/2', data)
 
 http.delete('http://jsonplaceholder.typicode.com/users/2', data)
     .then(data => console.log(data))
-    .catch(err => console.log(err));
+    .catch(err => console.log(err));*/
+
+
+// 69 ASYNC AWAIT
+
 
 
 
