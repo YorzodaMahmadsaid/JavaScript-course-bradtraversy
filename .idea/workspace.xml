@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db5f3911-4e11-4ec8-832a-643020f5c38f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1gPhW1qvv70ebSHdu5hKZUPcrmZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,9 +35,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Angular/smart-anbor-2/smart-anbor-ng2" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/javascript-bradtraversy/index.html" useBuiltInWebServerPort="true">
@@ -56,7 +65,9 @@
       <workItem from="1598022165745" duration="193000" />
       <workItem from="1598071288926" duration="2707000" />
       <workItem from="1598333623694" duration="809000" />
-      <workItem from="1598334452594" duration="7165000" />
+      <workItem from="1598334452594" duration="21909000" />
+      <workItem from="1598432203304" duration="9220000" />
+      <workItem from="1598492482369" duration="5173000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1598339267756</created>
@@ -72,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598340173038</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <created>1598342882567</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598342882567</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,14 +105,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="586" y="198" key="#Inspections/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598072139896" />
-    <state x="263" y="91" key="CommitChangelistDialog2" timestamp="1598340172128">
+    <state x="263" y="91" key="CommitChangelistDialog2" timestamp="1598342881680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="263" y="91" key="CommitChangelistDialog2/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598340172128" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1598022356253">
+    <state x="263" y="91" key="CommitChangelistDialog2/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598342881680" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1598439903416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598022356253" />
+    <state x="740" y="274" key="FileChooserDialogImpl/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598439903416" />
     <state width="1394" height="281" key="GridCell.Tab.0.bottom" timestamp="1598334436681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -127,9 +145,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1394" height="281" key="GridCell.Tab.1.right/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598334436681" />
-    <state x="308" y="256" key="Vcs.Push.Dialog.v2" timestamp="1598340174275">
+    <state x="308" y="256" key="Vcs.Push.Dialog.v2" timestamp="1598342883522">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="308" y="256" key="Vcs.Push.Dialog.v2/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598340174275" />
+    <state x="308" y="256" key="Vcs.Push.Dialog.v2/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598342883522" />
+    <state x="423" y="55" width="585" height="936" key="find.popup" timestamp="1598416555877">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="423" y="55" width="585" height="936" key="find.popup/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598416555877" />
+    <state x="379" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1598415424261">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="379" y="230" width="672" height="678" key="search.everywhere.popup/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1598415424261" />
   </component>
 </project>
