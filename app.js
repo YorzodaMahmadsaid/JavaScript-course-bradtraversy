@@ -2852,6 +2852,174 @@ http.delete('http://jsonplaceholder.typicode.com/users/2', data)
 
 // 80 ERROR HANDLING WITH TRY CATCH
 
+/*const user = {email: 'said@mail.ru'};
+
+try {
+    // myFunction();
+
+    // null.mufunction();
+
+    if(!user.name) {
+        // throw 'User has no name';
+        throw new SyntaxError('User has no name');
+    }
+
+} catch(err) {
+    console.log(`User error: ${err.message}`);
+} finally {
+    console.log('Finally runs regardless of result');
+}
+
+console.log('Program continues...');*/
+
+// 81 REGULAR EXPRESSIONS PART 1 EVALUATION FUNCTION
+
+// let re;
+// re = /hello/;
+// re = /hello/i;
+// re = /hello/g;
+
+// console.log(re);
+// console.log(re.source);
+
+// const result = re.exec('said hello world');
+//
+// console.log(result);
+// console.log(result[0]);
+// console.log(result.index);
+// console.log(result.input);
+
+// const result = re.test('hello');
+// console.log(result);
+
+// const str = 'Hello there';
+// const result = str.match(re);
+// console.log(result);
+
+// const str = 'Said hello there';
+// const result = str.search(re);
+// console.log(result);
+
+// const str = 'hello there';
+// const newStr = str.replace(re, 'Hi');
+// console.log(newStr);
+
+// 82-83 REGULAR EXPRESSION PART 2 METACHARACTER SYMBOLS
+
+// let re;
+// re = /hello/;
+// re = /hello/i;
+//
+// re = /^h/i;
+// re = /^world$/i;
+//
+// re = /gr[ae]y/i;
+//
+// const str = 'Gray';
+//
+// const result = re.exec(str);
+// console.log(result);
+//
+// function reTest(re, str) {
+//     if(re.test(str)) {
+//         console.log(`${str} matches ${re.source}`);
+//     } else {
+//         console.log(`${str} does not match ${re.source}`);
+//     }
+// }
+//
+// reTest(re, str);
+
+/*// 85 REGULAR EXPRESSION FORM VALIDATION PROJECT
+
+document.getElementById('name').addEventListener('blur', validateName);
+document.getElementById('zip').addEventListener('blur', validateZip);
+document.getElementById('email').addEventListener('blur', validateEmail);
+document.getElementById('phone').addEventListener('blur', validatePhone);
+
+function validateName() {
+    const name = document.getElementById('name');
+    const re = /^[a-zA-Z]{2,10}$/;
+
+    if(!re.test(name.value)) {
+        name.classList.add('is-invalid');
+    } else {
+        name.classList.remove('is-invalid');
+    }
+}
+
+function validateZip() {
+    const zip = document.getElementById('zip');
+    const re = /^[0-9]{5}(-[0-9]{4})?$/;
+
+    if(!re.test(zip.value)) {
+        zip.classList.add('is-invalid');
+    } else {
+        zip.classList.remove('is-invalid');
+    }
+}
+
+function validateEmail() {
+    const email = document.getElementById('email');
+    const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+).([a-zA-Z]{2,5})$/;
+
+    if(!re.test(email.value)) {
+        email.classList.add('is-invalid');
+    } else {
+        email.classList.remove('is-invalid');
+    }
+}
+
+function validatePhone() {
+    const phone = document.getElementById('phone');
+    const re = /^[+]*[(]{0, 1}[0-9]{1,4}[)]{0, 1}[-\s\./0-9]*$/g;
+
+    if(!re.test(phone.value)) {
+        phone.classList.add('is-invalid');
+    } else {
+        phone.classList.remove('is-invalid');
+    }
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
