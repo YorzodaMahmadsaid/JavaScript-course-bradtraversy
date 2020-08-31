@@ -3449,19 +3449,130 @@ console.log(gen.next().value);*/
 
 // 97 MEDIATOR PATTERN
 
+// const User = function(name) {
+//     this.name = name;
+//     this.chatroom = null;
+// }
+//
+// User.prototype = {
+//     send: function (message, to) {
+//         this.chatroom.send(message, this, to);
+//     },
+//     recieve: function(message, from) {
+//         console.log(`${from.name} to ${this.name} : ${message}`);
+//     }
+// }
+//
+// const Chatroom = function() {
+//     let users = {};
+//
+//     return {
+//         register: function(user){
+//             users[user.name] = user;
+//             user.chatroom = this;
+//         },
+//         send: function(message, from, to) {
+//             if(to) {
+//                 to.recieve(message,from);
+//             } else {
+//                 for(key in users) {
+//                     if(users[key] !== from) {
+//                         users[key].recieve(message, from);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+//
+// const brad = new User('Brad');
+// const jeff = new User('Jeff');
+// const sara = new User('Sara');
+//
+// const chatroom = new Chatroom();
+//
+// chatroom.register(brad);
+// chatroom.register(jeff);
+// chatroom.register(sara);
+//
+// brad.send('Hello Jeff', jeff);
+// sara.send('Hello Brad, you are the best dev ever', brad);
+// jeff.send('Hello everyone');
 
+// 98 STATE PATTERN SMALL PROJECT
 
+// const PageState = function() {
+//     let currentState = new homeState(this);
+//
+//     this.init = function() {
+//         this.change(new homeState);
+//     }
+//
+//     this.change = function(state) {
+//         currentState = state;
+//     }
+// };
+//
+// const homeState = function(page) {
+//     document.querySelector('#heading').textContent = null;
+//     document.querySelector('#content').innerHTML = `
+//     <div class="jumbotron">
+//       <h1 class="display-4">Hello, world!</h1>
+//       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+//       <hr class="my-4">
+//       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+//       <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+//     </div>`;
+// };
+//
+// const aboutState = function(page) {
+//     document.querySelector('#heading').textContent = 'About us';
+//     document.querySelector('#content').innerHTML = `<p>This is about page</p>`;
+// }
+//
+// const contactState = function(page) {
+//     document.querySelector('#heading').textContent = 'Contact us';
+//     document.querySelector('#content').innerHTML = `
+//     <form>
+//         <div class="form-group">
+//             <label>Name</label>
+//             <input type="text" class="form-control">
+//         </div>
+//         <div class="form-group">
+//             <label>Email address</label>
+//             <input type="email" class="form-control">
+//         </div>
+//         <button type="button" class="btn btn-primary">Submit</button>
+//     </form>`;
+// }
+//
+// const page = new PageState();
+//
+// page.init();
+//
+// const home = document.getElementById('home'),
+//       about = document.getElementById('about'),
+//       contact = document.getElementById('contact');
+//
+// home.addEventListener('click', (e) => {
+//     page.change(new homeState);
+//
+//     e.preventDefault();
+// });
+//
+// about.addEventListener('click', (e) => {
+//     page.change(new aboutState);
+//
+//     e.preventDefault();
+// });
+//
+// contact.addEventListener('click', (e) => {
+//     page.change(new contactState);
+//
+//     e.preventDefault();
+// });
 
-
-
-
-
-
-
-
-
-
-
+// 99 -100
 
 
 
