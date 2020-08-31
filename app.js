@@ -662,25 +662,25 @@ console.log(square(2));
    console.log('Hello ' + name)
 })('Said');
 
-const todo = {
-    add: function() {
-        console.log('Add todo');
-    },
-    edit: function(id) {
-        console.log(`Edit todo ${id}`)
-    }
-}
+// const todo = {
+//     add: function() {
+//         console.log('Add todo');
+//     },
+//     edit: function(id) {
+//         console.log(`Edit todo ${id}`)
+//     }
+// }
+//
+// todo.delete = function() {
+//     console.log('Delete todo');
+// }
+//
+// todo.delete();
+// todo.add();
+// todo.edit(22);
+// console.log(todo);
 
-todo.delete = function() {
-    console.log('Delete todo');
-}
 
-todo.delete(); 
-todo.add();
-todo.edit(22);
-console.log(todo); */
-
-/*
 // 018 General loops
 for(let i = 0; i < 3; i++) {
     console.log(i);
@@ -2981,38 +2981,473 @@ function validatePhone() {
     }
 }*/
 
+// 86 ITERATORS GENERATORS
 
+/*function nameIterators(names) {
+    let nextIndex = 0;
 
+    return{
+        next: function() {
+            return nextIndex < names.length ?
+                {value: names[nextIndex++], done: false} :
+                {done: true}
+        }
+    }
+}
 
+const namesArr = ['Jack', 'Jill', 'John'];
+const names = nameIterators(namesArr);
+console.log(names.next().value);
+console.log(names.next().value);
+console.log(names.next().value);
+console.log(names.next());*/
 
+/*function* sayNames() {
+    yield 'Jack';
+    yield 'Jill';
+    yield 'John';
+}
 
+const name = sayNames();
 
+console.log(name.next().value);
+console.log(name.next().value);
+console.log(name.next().value);
+console.log(name.next());*/
 
+/*function* createIds() {
+    let index = 0;
 
+    while(true) {
+        yield index++;
+    }
+}
 
+const gen = createIds();
 
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);*/
 
+// 87 PROFILE SCROLLER ITERATOR MINI PROJECT
+// const data = [
+//     {
+//         name: 'John Doe',
+//         age: 32,
+//         gender: 'male',
+//         lookingfor: 'female',
+//         location: 'Boston Ma',
+//         image: 'http://randomuser.me/api/portraits/men/81.jpg'
+//     },
+//     {
+//         name: 'Yorzoda',
+//         age: 30,
+//         gender: 'female',
+//         lookingfor: 'male',
+//         location: 'Norak Ma',
+//         image: 'http://randomuser.me/api/portraits/men/82.jpg'
+//     },
+//     {
+//         name: 'John Doe',
+//         age: 32,
+//         gender: 'male',
+//         lookingfor: 'female',
+//         location: 'Boston Ma',
+//         image: 'http://randomuser.me/api/portraits/men/83.jpg'
+//     },
+//     {
+//         name: 'John Doe',
+//         age: 32,
+//         gender: 'male',
+//         lookingfor: 'female',
+//         location: 'Boston Ma',
+//         image: 'http://randomuser.me/api/portraits/men/84.jpg'
+//     },
+// ];
+//
+// const profiles = profileIterator(data);
+//
+// nextProfile();
+//
+// document.getElementById('next').addEventListener('click', nextProfile);
+//
+// function nextProfile() {
+//     const currentProfile = profiles.next().value;
+//     if(currentProfile !== undefined) {
+//         document.getElementById('profileDisplay').innerHTML = `
+//     <ul class="list-group">
+//         <li class="list-group-item">Name: ${currentProfile.name}</li>
+//         <li class="list-group-item">Age: ${currentProfile.age}</li>
+//         <li class="list-group-item">Location: ${currentProfile.location}</li>
+//         <li class="list-group-item">Preference: ${currentProfile.gender} looking for ${currentProfile.lookingfor}</li>`;
+//
+//         document.getElementById('imageDisplay').innerHTML = `
+//     <img src="${currentProfile.image}">`;
+//     } else {
+//         window.location.reload();
+//     }
+// }
+//
+// function profileIterator(profiles) {
+//     let nextIndex = 0;
+//
+//     return {
+//         next: function() {
+//             return nextIndex < profiles.length ?
+//                 {value: profiles[nextIndex++], done: false} :
+//                 {done: true}
+//         }
+//     };
+// }
 
+// 88 SYMBOLS
 
+// const sym1 = Symbol();
+// const sym2 = Symbol('sym2');
+//
+// console.log(sym1);
+// console.log(sym2);
+// console.log(typeof sym2);
+//
+// console.log(Symbol() === Symbol());
+// console.log(`Hello ${sym1.toString()}`);
+//
+// const KEY1 = Symbol();
+// const KEY2 = Symbol('sym2');
+//
+// const myObj = {};
+//
+// myObj[KEY1] = 'Prop1';
+// myObj[KEY2] = 'Prop2';
+// myObj.key3 = 'Prop3';
+// myObj.key4 = 'Prop4';
+//
+// console.log(myObj[KEY1]);
+// console.log(myObj[KEY2]);
+//
+// for(let i in myObj) {
+//     console.log(`${i} : ${myObj[i]}`);
+// }
+//
+// console.log(JSON.stringify({key: 'prop'}));
+// console.log(JSON.stringify({[Symbol('sym1')]: 'prop'}));
 
+// 89 DESTRUCTURING
+// let a, b;
+// [a, b] = [100, 200];
+//
+// console.log(a, b);
+//
+// [a, b, c, ...rest] = [100, 200, 300, 400, 500];
+// console.log(a, b, c, rest);
+//
+// ({a, b} = {a:100, b:200, c:300, d:400, e:500});
+// ({a, b, c, ...rest} = {a:100, b:200, c:300, d:400, e:500});
+//
+// console.log(a, b, c);
+// console.log(rest);
+//
+// const people = ['Said', 'Navruz', 'Firuz'];
+// const [person1, person2, person3] = people;
+//
+// console.log(person1, person2, person3);
+//
+// function getPeople() {
+//     return ['Said', 'Navruz', 'Firuz'];
+// }
+//
+// let person1, person2, person3;
+// [person1, person2, person3] = getPeople();
+//
+// console.log(person1, person2, person3);
 
+// const person = {
+//     name: 'John Doe',
+//     age: 30,
+//     city: 'Norak',
+//     gender: 'Male',
+//     sayHello() {
+//         console.log('Hello');
+//     }
+// }
 
+// const name = person.name,
+//       age = person.age,
+//       city = person.city;
+//
+// console.log(name, age, city);
 
+// const {name, age, city, sayHello} = person;
+//
+// console.log(name, age, city);
+//
+// sayHello();
 
+// 90 ES MAPS
 
+// const map1 = new Map();
+//
+// const key1 = 'some string';
+//       key2 = {},
+//       key3 = function() {};
+//
+// map1.set(key1, 'Value of key1');
+// map1.set(key2, 'Value of key2');
+// map1.set(key3, 'Value of key3');
 
+// console.log(map1.get(key1), map1.get(key2), map1.get(key3));
 
+// console.log(map1.size);
 
+// for(let [key, value] of map1) {
+//     console.log(`${key} = ${value}`);
+// }
+//
+// for(let key of map1.keys()) {
+//     console.log(key);
+// }
 
+// map1.forEach((value, key) => {
+//     console.log(`${key} = ${value}`);
+// });
 
+// const keyValArr = Array.from(map1);
+// console.log(keyValArr);
 
+// const valArr = Array.from(map1.values());
+// console.log(valArr);
+//
+// const keyArr = Array.from(map1.keys());
+// console.log(keyArr);
 
+// 91 ES6 SETS
 
+// const set1 = new Set();
+//
+// set1.add(100);
+// set1.add('A string');
+// set1.add({name: 'John'});
+// set1.add(true);
 
+// const set2 = new Set([1, 'string', true]);
+// console.log(set2);
 
+// console.log(set1);
+// console.log(set1.size);
+// console.log(set1.has(100));
+// console.log(set1.has(50 + 50));
+//
+// set1.delete(100);
+// console.log(set1);
 
+// for(let item of set1) {
+//     console.log(item);
+// }
+//
+// set1.forEach((value) => {
+//     console.log(value);
+// });
+//
+// const setArr = Array.from(set1);
+// console.log(setArr);
 
+// 93 MODULE REVEALING MODULE PATTERN
 
+// (function() {return{}})();
+//
+// const UICtrl = (function() {
+//     let text = 'Hello world';
+//
+//     const changeText = function() {
+//         const element = document.querySelector('h1');
+//         element.textContent = text;
+//     }
+//
+//     return {
+//         callChangeText: function() {
+//             changeText();
+//             console.log(text);
+//         }
+//     }
+// })();
+//
+// UICtrl.callChangeText();
+//
+// console.log(UICtrl.text);
+
+// REVEALING MODULE PATTERN
+// const ItemCtrl = (function() {
+//     let data = [];
+//
+//     function add(item) {
+//         data.push(item);
+//         console.log('Item added...');
+//     }
+//
+//     function get(id) {
+//         return data.find(item => {
+//             return item.id === id;
+//         });
+//     }
+//
+//     return {
+//         add: add,
+//         get: get
+//     }
+// })();
+//
+// ItemCtrl.add({id: 1, name: 'John'});
+// ItemCtrl.add({id: 2, name: 'Mark'});
+// console.log(ItemCtrl.get(1));
+// console.log(ItemCtrl.get(2));
+
+// 94 SINGLETON PATTERN
+
+// const Singleton = (function() {
+//     let instance;
+//
+//     function createInstance() {
+//         const object = new Object({name:'Said'});
+//         return object;
+//     }
+//
+//     return {
+//         getInstance: function() {
+//             if(!instance) {
+//                 instance = createInstance();
+//             }
+//             return instance;
+//         }
+//     }
+// })();
+//
+// const instanceA = Singleton.getInstance();
+// const instanceB = Singleton.getInstance();
+//
+// console.log(instanceA);
+// console.log(instanceA === instanceB);
+
+// 95 FACTORY PATTERN
+
+// function MemberFactory() {
+//     this.createMember = function(name, type) {
+//         let member;
+//
+//         if(type === 'simple') {
+//             member = new SimpleMembership(name);
+//         } else if(type === 'standard') {
+//             member = new StandardMembership(name);
+//         } else if(type === 'super') {
+//             member = new SuperMembership(name);
+//         }
+//
+//         member.type = type;
+//
+//         member.define = function() {
+//             console.log(`${this.name} (${this.type})`);
+//         }
+//
+//         return member;
+//     }
+// }
+//
+// const SimpleMembership = function(name) {
+//     this.name = name;
+//     this.cost = '5$';
+// }
+//
+// const StandardMembership = function(name) {
+//     this.name = name;
+//     this.cost = '15$';
+// }
+//
+// const SuperMembership = function(name) {
+//     this.name = name;
+//     this.cost = '25$';
+// }
+//
+// const members = [];
+// const factory = new MemberFactory();
+//
+// members.push(factory.createMember('Said', 'simple'));
+// members.push(factory.createMember('Yoroz', 'simple'));
+// members.push(factory.createMember('Jajaj', 'simple'));
+// members.push(factory.createMember('Jajjoj', 'simple'));
+//
+// // console.log(members);
+//
+// members.forEach((member) => {
+//     member.define();
+// });
+
+// 96 OBSERVER PATTERN
+
+// function EventObserver() {
+//     this.observers = [];
+// }
+//
+// EventObserver.prototype = {
+//     subscribe: function (fn) {
+//         this.observers.push(fn);
+//         console.log(`You are now subscribe to ${fn.name}`);
+//     },
+//
+//     unsubscribe: function (fn) {
+//         this.observers = this.observers.filter(function (item) {
+//             if(item !== fn) {
+//                 return item;
+//             }
+//         });
+//         console.log(`You are now unsubscribe form ${fn.name}`);
+//     },
+//
+//     fire: function() {
+//         this.observers.forEach((item) => {
+//             item.call();
+//         });
+//     }
+// }
+//
+// const click = new EventObserver();
+//
+// document.querySelector('.sub-ms').addEventListener('click',
+//     function() {
+//     click.subscribe(getCurMilliseconds);
+// });
+//
+// document.querySelector('.unsub-ms').addEventListener('click',
+//     function() {
+//     click.unsubscribe(getCurMilliseconds);
+// });
+//
+// document.querySelector('.sub-s').addEventListener('click',
+//     function() {
+//     click.subscribe(getCurSeconds);
+//     });
+//
+// document.querySelector('.unsub-s').addEventListener('click',
+//     function() {
+//     click.unsubscribe(getCurSeconds);
+//     });
+//
+// document.querySelector('.fire').addEventListener('click',
+//     function() {
+//     click.fire();
+//     });
+//
+// const getCurMilliseconds = function() {
+//     console.log(`Current Milliseconds: ${ new Date().getMilliseconds()}`);
+// }
+//
+// const getCurSeconds = function() {
+//     console.log(`Current seconds: ${ new Date().getSeconds()}`);
+// }
+
+// 97 MEDIATOR PATTERN
 
 
 
