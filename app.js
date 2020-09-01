@@ -1433,7 +1433,7 @@ function filterTasks(e) {
  function removeTask(e) {
      if(e.target.className === 'collection-item' || e.target.id === 'task-list') {
         if(confirm('Are you sure?')) {
-           e.target.remove(); 
+           e.target.remove();
            removeTaskFromLocalStorage(e.target)
            console.log(e.target)
         }
@@ -3574,7 +3574,8 @@ console.log(gen.next().value);*/
 
 // 99 -101 CONTROLLER DATA STRUCTURE
 
-/*const StorageCtrl = (function() {
+/*
+const StorageCtrl = (function() {
     return {
         storeItem: function(item) {
             let items;
@@ -3635,7 +3636,6 @@ const ItemCtrl = (function () {
         this.name = name;
         this.calories = calories;
     }
-
     const data = {
         // items: [
         //     // {id: 0, name: 'Steak dinner', calories: 1200},
@@ -3735,7 +3735,6 @@ const ItemCtrl = (function () {
 })();
 
 const UICtrl = (function () {
-
     const UISelectors = {
         itemList: '#item-list',
         addBtn: '.add-btn',
@@ -3748,9 +3747,8 @@ const UICtrl = (function () {
         itemCaloriesInput: '#item-calories',
         totalCalories: '.total-calories',
     }
-
     return {
-        populateItemList: function (items) {
+        populateItemList: function(items) {
             let html = '';
 
             items.forEach(
@@ -3766,7 +3764,7 @@ const UICtrl = (function () {
             document.querySelector(UISelectors.itemList).innerHTML = html;
         },
 
-        getItemInput: function () {
+        getItemInput: function() {
             return {
                 name: document.querySelector(UISelectors.itemNameInput).value,
                 calories: document.querySelector(UISelectors.itemCaloriesInput).value
@@ -3971,5 +3969,8 @@ const AppCtrl = (function (StoreCtrl, ItemCtrl, UICtrl) {
 
 })(StorageCtrl, ItemCtrl, UICtrl);
 
-AppCtrl.init();*/
+AppCtrl.init();
+*/
+
+
 
